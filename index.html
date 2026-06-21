@@ -195,73 +195,156 @@ body[data-theme="ngo"]{
 /* =====================================================================
    HOME — editorial portfolio launcher (asymmetric)
    ===================================================================== */
-.hm-hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:64px 0 40px}
-.hm-hero h1{font-family:var(--font-head);font-size:clamp(38px,5.4vw,64px);line-height:1.03;letter-spacing:-.03em;font-weight:800}
+.hm-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:72px 0 58px}
+.hm-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);background:rgba(79,70,229,.07);border:1px solid rgba(79,70,229,.16);padding:7px 14px;border-radius:99px}
+.hm-eyebrow .icon{width:15px;height:15px}
+.hm-hero h1{font-family:var(--font-head);font-size:clamp(40px,5.2vw,66px);line-height:1.04;letter-spacing:-.035em;font-weight:800;margin-top:22px}
 .hm-hero h1 .hl{background:linear-gradient(110deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hm-lead{font-size:clamp(16px,1.7vw,19px);color:var(--muted);line-height:1.65;max-width:560px;margin-top:18px}
-.hm-chips{display:flex;flex-wrap:wrap;gap:18px;margin-top:30px}
-.hm-chip{display:flex;flex-direction:column}
-.hm-chip b{font-size:26px;font-family:var(--font-head);font-weight:800}
-.hm-chip span{font-size:12.5px;color:var(--muted)}
-.hm-window{background:var(--card);border:1px solid var(--card-border);border-radius:18px;box-shadow:var(--shadow);overflow:hidden;transform:rotate(1.2deg);transition:transform .4s}
-.hm-window:hover{transform:rotate(0)}
-.hm-winbar{display:flex;align-items:center;gap:6px;padding:11px 14px;background:linear-gradient(180deg,#fbfbfe,#f1f2fa);border-bottom:1px solid var(--card-border)}
-.hm-winbar i{width:11px;height:11px;border-radius:50%;background:#dfe1ee;display:block}
-.hm-winbar i:nth-child(1){background:#ff6058}.hm-winbar i:nth-child(2){background:#ffbd2e}.hm-winbar i:nth-child(3){background:#28c840}
-.hm-winbody{padding:20px;display:grid;gap:13px}
-.hm-skel{height:13px;border-radius:6px;background:linear-gradient(90deg,#e9ebf6,#f5f6fc)}
-.hm-skel.lg{height:30px;width:62%;background:linear-gradient(110deg,var(--accent),var(--accent2));opacity:.85}
-.hm-skel.w1{width:90%}.hm-skel.w2{width:78%}
-.hm-skelrow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
-.hm-skelcard{height:70px;border-radius:12px;background:linear-gradient(160deg,#eef0fa,#e3e6f5)}
+.hm-lead{font-size:clamp(16px,1.5vw,18.5px);color:var(--muted);line-height:1.7;max-width:540px;margin-top:22px}
+.hm-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hm-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 26px;border-radius:12px;font-weight:600;font-size:15px;font-family:var(--font);cursor:pointer;border:1.5px solid transparent;transition:transform .2s,box-shadow .2s,border-color .2s,color .2s;text-decoration:none}
+.hm-btn .icon{width:18px;height:18px}
+.hm-btn.primary{background:linear-gradient(120deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 10px 24px rgba(79,70,229,.28)}
+.hm-btn.primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(79,70,229,.36)}
+.hm-btn.ghost{background:var(--bg2);border-color:var(--card-border);color:var(--fg)}
+.hm-btn.ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.hm-trust{display:flex;flex-wrap:wrap;margin-top:40px}
+.hm-trust .t{display:flex;flex-direction:column;gap:3px;padding-right:26px}
+.hm-trust .t+.t{padding-left:26px;border-left:1px solid var(--card-border)}
+.hm-trust .t b{font-family:var(--font-head);font-size:24px;font-weight:800;letter-spacing:-.02em;line-height:1}
+.hm-trust .t span{font-size:12.5px;color:var(--muted)}
 
-.hm-section-head{margin:62px 0 24px;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.hm-section-head h2{font-family:var(--font-head);font-size:clamp(24px,3vw,33px);font-weight:800;letter-spacing:-.02em}
-.hm-section-head p{color:var(--muted);max-width:440px;font-size:14.5px;line-height:1.6}
+/* hero browser mockups */
+.hm-mock{position:relative;height:440px}
+.hm-mock .w{position:absolute;border-radius:14px;overflow:hidden;box-shadow:0 30px 64px rgba(24,24,60,.18)}
+.hm-mock .bar{display:flex;align-items:center;gap:6px;padding:10px 13px;border-bottom:1px solid var(--card-border);background:linear-gradient(180deg,#fcfcff,#f1f2fb)}
+.hm-mock .bar i{width:9px;height:9px;border-radius:50%;background:#dfe1ee;flex-shrink:0}
+.hm-mock .bar i:nth-child(1){background:#ff6058}.hm-mock .bar i:nth-child(2){background:#ffbd2e}.hm-mock .bar i:nth-child(3){background:#28c840}
+.hm-mock .bar .url{margin-left:8px;height:7px;width:46%;max-width:120px;border-radius:4px;background:#e6e8f3}
+.hm-mock .w-main{left:0;right:30px;top:44px;background:#fff;border:1px solid var(--card-border)}
+.hm-mock .w-main .body{padding:17px;display:grid;gap:11px}
+.hm-mock .mhead{height:26px;width:54%;border-radius:7px;background:linear-gradient(110deg,var(--accent),var(--accent2))}
+.hm-mock .mline{height:9px;border-radius:5px;background:#eceef7}
+.hm-mock .mline.s{width:82%}.hm-mock .mline.xs{width:60%}
+.hm-mock .mrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:5px}
+.hm-mock .mcard{height:58px;border-radius:10px;background:linear-gradient(160deg,#eef0fa,#e2e5f4)}
+.hm-mock .mcard:nth-child(2){background:linear-gradient(160deg,#ece9ff,#d9d2ff)}
+.hm-mock .w-dark{right:0;top:0;width:152px;background:#0b1020;border:1px solid #1c2742;animation:hmFloatB 6s ease-in-out infinite}
+.hm-mock .w-dark .bar{background:#0a0f1d;border-color:#1c2742}
+.hm-mock .w-dark .bar i{background:#1c2742}.hm-mock .w-dark .bar i:nth-child(1){background:#22e3c2}
+.hm-mock .w-dark .body{padding:13px;display:grid;gap:8px}
+.hm-mock .w-dark .dl{height:7px;border-radius:4px;background:#1c2742}
+.hm-mock .w-dark .dl.g{width:58%;background:linear-gradient(90deg,#22e3c2,#5cf2ff)}
+.hm-mock .w-dark .dchart{height:38px;border-radius:8px;background:linear-gradient(160deg,#0e2a3a,#143a55);border:1px solid #1c2742;margin-top:2px}
+.hm-mock .w-grad{left:6px;bottom:0;width:160px;background:linear-gradient(140deg,#7b2ff7,#f107a3);animation:hmFloatC 8s ease-in-out infinite}
+.hm-mock .w-grad .gbar{display:block;height:10px;width:52%;border-radius:5px;background:rgba(255,255,255,.9);margin:16px 14px 0}
+.hm-mock .w-grad .gline{display:block;height:7px;border-radius:4px;background:rgba(255,255,255,.5);margin:9px 14px 0}
+.hm-mock .w-grad .gline.s{width:68%}
+.hm-mock .w-grad .gcard{display:block;height:46px;border-radius:10px;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.35);margin:13px 14px 16px}
+.hm-mock .w-main{animation:hmFloatA 7s ease-in-out infinite}
+@keyframes hmFloatA{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+@keyframes hmFloatB{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+@keyframes hmFloatC{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media(prefers-reduced-motion:reduce){.hm-mock .w{animation:none}}
 
-.hm-gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-.hm-style{grid-column:span 4;border-radius:16px;overflow:hidden;border:1px solid var(--card-border);background:var(--card);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .25s;text-align:left}
-.hm-style:first-child{grid-column:span 6}
-.hm-style:nth-child(2){grid-column:span 6}
-.hm-style:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(20,24,50,.16);border-color:var(--accent)}
-.hm-prev{height:128px;position:relative;padding:12px;display:flex;flex-direction:column;justify-content:flex-end;gap:7px}
-.hm-prev::before{content:"";position:absolute;top:10px;left:12px;right:12px;height:7px;border-radius:4px;background:rgba(255,255,255,.5)}
-.hm-prev .pl{height:8px;border-radius:4px;background:rgba(255,255,255,.65);width:70%}
-.hm-prev .pl.s{width:45%;height:7px;opacity:.8}
-.hm-prev .pr{display:flex;gap:6px}.hm-prev .pr span{flex:1;height:22px;border-radius:6px;background:rgba(255,255,255,.32)}
-.hm-style .meta{padding:15px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px}
-.hm-style .meta b{font-family:var(--font-head);font-size:17px}
-.hm-style .meta small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
-.hm-style .go{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--bg2);border:1px solid var(--card-border);transition:.2s}
-.hm-style:hover .go{background:var(--accent);color:#fff;border-color:var(--accent)}
-.prev-dark{background:linear-gradient(135deg,#0b1020,#10243a)}
-.prev-light{background:linear-gradient(135deg,#bfe0ff,#eaf3ff)}
-.prev-modern{background:linear-gradient(135deg,#7b2ff7,#f107a3)}
-.prev-old{background:linear-gradient(135deg,#0a8f88,#1084d0)}
-.prev-business{background:linear-gradient(135deg,#0a2342,#2f80d6)}
-.prev-sport{background:linear-gradient(120deg,#ff2d2d,#ff9500)}
-.prev-ngo{background:linear-gradient(135deg,#2f9e58,#82c54a)}
+/* section heads */
+.hm-head{max-width:600px;margin:80px 0 30px}
+.hm-head .k{display:block;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.hm-head h2{font-family:var(--font-head);font-size:clamp(26px,3.2vw,38px);font-weight:800;letter-spacing:-.025em;line-height:1.1}
+.hm-head p{color:var(--muted);font-size:15.5px;line-height:1.65;margin-top:13px}
 
-.hm-cap{display:flex;flex-wrap:wrap;gap:14px}
-.hm-cap .item{flex:1 1 220px;display:flex;gap:13px;align-items:flex-start;padding:18px;border-left:2px solid var(--card-border);transition:border-color .2s}
-.hm-cap .item:hover{border-color:var(--accent)}
-.hm-cap .item .icon{color:var(--accent);width:26px;height:26px}
-.hm-cap .item h3{font-size:16px;font-family:var(--font-head);margin-bottom:5px}
-.hm-cap .item p{font-size:13.5px;color:var(--muted);line-height:1.6}
+/* style explorer */
+.hm-styles{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}
+.hm-card{flex:1 1 258px;max-width:316px;background:var(--card);border:1px solid var(--card-border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s,border-color .28s}
+.hm-card:hover{transform:translateY(-7px);box-shadow:0 26px 50px rgba(24,24,60,.15);border-color:var(--accent)}
+.hm-thumb{height:160px;position:relative;overflow:hidden;border-bottom:1px solid var(--card-border)}
+.hm-thumb>span{position:absolute}
+.hm-card .info{padding:16px 18px 18px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.hm-card .info b{font-family:var(--font-head);font-size:17px;font-weight:700}
+.hm-card .info small{display:block;color:var(--muted);font-size:12.5px;line-height:1.5;margin-top:5px}
+.hm-card .go{flex-shrink:0;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--bg);border:1px solid var(--card-border);color:var(--muted);transition:.22s}
+.hm-card .go .icon{width:16px;height:16px}
+.hm-card:hover .go{background:var(--accent);border-color:var(--accent);color:#fff}
+.th-dark{background:radial-gradient(130% 120% at 0% 0%,#10243a,#070a14)}
+.th-dark .d1{left:16px;top:16px;width:44%;height:56%;border-radius:9px;background:#121a30;border:1px solid #1d2742}
+.th-dark .d2{right:16px;top:16px;width:32%;height:26%;border-radius:9px;background:linear-gradient(135deg,#22e3c2,#5cf2ff)}
+.th-dark .d3{right:16px;top:46%;width:32%;height:26%;border-radius:9px;background:#121a30;border:1px solid #1d2742}
+.th-dark .d4{left:16px;right:16px;bottom:16px;height:20%;border-radius:9px;background:#121a30;border:1px solid #1d2742}
+.th-light{background:#fff}
+.th-light>span{background:#e7ebf3;border-radius:4px;left:50%;transform:translateX(-50%)}
+.th-light .l1{top:36px;width:60%;height:12px;background:#cdd5e6}
+.th-light .l2{top:58px;width:44%;height:7px}
+.th-light .l3{top:74px;width:32%;height:7px}
+.th-light .l4{bottom:26px;width:66px;height:22px;border-radius:99px;background:#fff;border:1.5px solid #cdd5e6}
+.th-modern{background:linear-gradient(135deg,#7b2ff7,#f107a3)}
+.th-modern .m-blob{width:86px;height:86px;border-radius:50%;background:rgba(255,255,255,.28);top:-18px;right:-12px}
+.th-modern .m-pill{top:18px;left:18px;width:46%;height:12px;border-radius:99px;background:rgba(255,255,255,.9)}
+.th-modern .m-glass{left:18px;right:18px;bottom:18px;height:56px;border-radius:12px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(5px)}
+.th-old{background:#0b8e88}
+.th-old .o-win{left:18px;right:18px;top:22px;bottom:22px;background:#c0c0c0;box-shadow:inset -2px -2px 0 #808080,inset 2px 2px 0 #fff}
+.th-old .o-tb{position:absolute;left:4px;right:4px;top:4px;height:15px;background:linear-gradient(90deg,#000080,#1084d0)}
+.th-old .o-row{position:absolute;left:8px;right:8px;bottom:8px;display:flex;gap:6px}
+.th-old .o-row span{position:static;flex:1;height:15px;background:#c0c0c0;box-shadow:inset -1px -1px 0 #808080,inset 1px 1px 0 #fff}
+.th-business{background:#f3f6fb}
+.th-business .b-side{left:0;top:0;bottom:0;width:26%;background:linear-gradient(180deg,#0b2545,#143a6b)}
+.th-business .b-top{left:33%;right:16px;top:18px;height:9px;border-radius:4px;background:#d4dce9}
+.th-business .b-bars{left:33%;right:16px;bottom:18px;height:62px;display:flex;align-items:flex-end;gap:7px}
+.th-business .b-bars i{flex:1;background:linear-gradient(180deg,#2f7fd6,#1456b8);border-radius:3px 3px 0 0}
+.th-business .b-bars i:nth-child(1){height:42%}.th-business .b-bars i:nth-child(2){height:62%}.th-business .b-bars i:nth-child(3){height:82%}.th-business .b-bars i:nth-child(4){height:100%}
+.th-sport{background:#0d0d0f}
+.th-sport .s-stripe{inset:0;background:linear-gradient(115deg,transparent 40%,#ff2d2d 40%,#ff8a00 72%,transparent 72%)}
+.th-sport .s-bar{left:16px;top:24px;width:48%;height:17px;background:#fff;transform:skewX(-12deg)}
+.th-sport .s-dot{left:16px;bottom:22px;width:30%;height:10px;background:rgba(255,255,255,.55);transform:skewX(-12deg)}
+.th-ngo{background:#eef5e6}
+.th-ngo .n-card{left:16px;right:16px;top:18px;bottom:18px;background:#fff;border:1px solid #dfe9d2;border-radius:11px}
+.th-ngo .n-line{position:absolute;left:14px;top:14px;width:54%;height:8px;border-radius:4px;background:#cfe0c2}
+.th-ngo .n-track{position:absolute;left:14px;right:14px;top:34px;height:13px;border-radius:99px;background:#e6efdc;overflow:hidden}
+.th-ngo .n-track i{position:absolute;left:0;top:0;bottom:0;width:72%;background:linear-gradient(90deg,#2f9e58,#7cc24a)}
+.th-ngo .n-row{position:absolute;left:14px;right:14px;bottom:14px;height:20px;border-radius:6px;background:#eef5e6}
 
-.hm-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:step}
-.hm-step{padding:24px 22px 24px 0;position:relative;border-top:2px solid var(--card-border)}
-.hm-step::before{counter-increment:step;content:"0" counter(step);font-family:var(--font-head);font-weight:800;font-size:13px;color:var(--accent);position:absolute;top:-11px;background:var(--bg);padding-right:10px}
-.hm-step h3{font-family:var(--font-head);font-size:17px;margin:8px 0 7px}
-.hm-step p{font-size:13.5px;color:var(--muted);line-height:1.6}
+/* services */
+.hm-serv{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--card-border);border:1px solid var(--card-border);border-radius:18px;overflow:hidden}
+.hm-serv .s{background:var(--card);padding:28px 26px;transition:background .2s}
+.hm-serv .s:hover{background:#fbfbff}
+.hm-serv .s .ic{display:grid;place-items:center;width:46px;height:46px;border-radius:12px;background:rgba(79,70,229,.08);color:var(--accent);margin-bottom:16px}
+.hm-serv .s .ic .icon{width:22px;height:22px}
+.hm-serv .s h3{font-family:var(--font-head);font-size:17px;font-weight:700;margin-bottom:8px}
+.hm-serv .s p{color:var(--muted);font-size:14px;line-height:1.6}
 
-.hm-cta{margin-top:62px;border-radius:24px;padding:46px;color:#fff;position:relative;overflow:hidden;
-  background:linear-gradient(125deg,#332c8f,#5b51f0 45%,#9b87ff)}
-.hm-cta::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.12)}
-.hm-cta h2{font-family:var(--font-head);font-size:clamp(24px,3.4vw,36px);font-weight:800;max-width:560px;position:relative}
-.hm-cta p{margin-top:12px;max-width:520px;opacity:.92;line-height:1.6;position:relative}
-.hm-cta .btn.primary{background:#fff;color:#3b34b0;margin-top:26px}
-.hm-cta .btn.primary:hover{box-shadow:0 14px 30px rgba(0,0,0,.25)}
+/* process */
+.hm-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;counter-reset:step;margin-top:4px}
+.hm-step{position:relative;padding-top:34px}
+.hm-step::before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;top:0;left:0;font-family:var(--font-head);font-weight:800;font-size:15px;color:var(--accent)}
+.hm-step::after{content:"";position:absolute;top:8px;left:38px;right:-13px;height:2px;background:var(--card-border)}
+.hm-step:last-child::after{display:none}
+.hm-step h3{font-family:var(--font-head);font-size:17px;font-weight:700;margin-bottom:8px}
+.hm-step p{color:var(--muted);font-size:14px;line-height:1.6}
+
+/* final cta */
+.hm-final{margin-top:84px;border-radius:26px;padding:clamp(40px,6vw,68px) clamp(28px,5vw,56px);text-align:center;position:relative;overflow:hidden;color:#fff;background:linear-gradient(125deg,#3b2fae,#5b51f0 48%,#8b7cff)}
+.hm-final::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.1);top:-130px;right:-70px}
+.hm-final::after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.08);bottom:-120px;left:-60px}
+.hm-final h2{font-family:var(--font-head);font-size:clamp(26px,3.6vw,40px);font-weight:800;line-height:1.14;letter-spacing:-.02em;max-width:680px;margin:0 auto;position:relative}
+.hm-final p{position:relative;margin:14px auto 0;max-width:520px;opacity:.9;font-size:16px;line-height:1.6}
+.hm-final .hm-btn{margin-top:30px;position:relative;background:#fff;color:#4b3fd0;border-color:#fff}
+.hm-final .hm-btn:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(0,0,0,.28)}
+
+/* home footer = 4 columns */
+body[data-theme="home"] .foot-grid{grid-template-columns:1.7fr 1fr 1fr 1fr}
+
+@media(max-width:980px){
+  .hm-mock{height:360px;max-width:480px;margin:6px auto 0}
+  .hm-serv{grid-template-columns:repeat(2,1fr)}
+  .hm-step::after{display:none}
+  body[data-theme="home"] .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .hm-mock{height:316px}
+  .hm-serv{grid-template-columns:1fr}
+  .hm-trust .t+.t{padding-left:0;border-left:0}
+  .hm-actions .hm-btn{flex:1 1 100%}
+  body[data-theme="home"] .foot-grid{grid-template-columns:1fr}
+}
 
 /* =====================================================================
    DARK — bento grid (tech / SaaS)
@@ -754,84 +837,161 @@ body[data-theme="ngo"] .ng-help .foot-soc a{background:rgba(255,255,255,.18);bor
   <main id="main">
 
   <!-- ===== HOME ===== -->
-  <section class="page active" data-page="home" aria-label="Home — portfolio overview">
+  <section class="page active" data-page="home" aria-label="Home — web design studio">
     <div class="wrap">
+
+      <!-- HERO -->
       <div class="hm-hero">
         <div data-reveal>
-          <span class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-layout"/></svg>Freelance Web Design</span>
-          <h1>One studio,<br><span class="hl">eight distinct worlds</span></h1>
-          <p class="hm-lead">I design and build websites that fit the brand they belong to — not a template with new colours. Open any demo on the left to see a complete, production-ready interface for a different industry.</p>
-          <div class="cta-row">
-            <a class="btn primary" href="#dark" data-route="dark">Explore the demos <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-            <a class="btn ghost" href="#business" data-route="business">See a client case</a>
+          <span class="hm-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg>Freelance Web Design Studio</span>
+          <h1>Web design <span class="hl">tailored to your vision</span></h1>
+          <p class="hm-lead">From bold and experimental to clean and corporate — explore different design styles and discover what your future website could look like.</p>
+          <div class="hm-actions">
+            <a class="hm-btn primary" href="#style-explorer" onclick="var t=document.getElementById('style-explorer');if(t){t.scrollIntoView({behavior:'smooth'});return false;}">Explore the styles <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="hm-btn ghost" href="https://de.fiverr.com/kuratleflorian/build-your-professional-website?ref_ctx_id=336a73b4a67f4a9f82f2311ffd5e2c69&amp;pckg_id=1&amp;source=seller_page" target="_blank" rel="noopener noreferrer">Request a custom website</a>
           </div>
-          <div class="hm-chips">
-            <div class="hm-chip"><b>8</b><span>Full demo sites</span></div>
-            <div class="hm-chip"><b>100%</b><span>Hand-coded &amp; responsive</span></div>
-            <div class="hm-chip"><b>A11y</b><span>Accessible by default</span></div>
-          </div>
-        </div>
-        <div class="hm-window" data-reveal aria-hidden="true">
-          <div class="hm-winbar"><i></i><i></i><i></i></div>
-          <div class="hm-winbody">
-            <div class="hm-skel lg"></div>
-            <div class="hm-skel w1"></div>
-            <div class="hm-skel w2"></div>
-            <div class="hm-skelrow"><div class="hm-skelcard"></div><div class="hm-skelcard"></div><div class="hm-skelcard"></div></div>
+          <div class="hm-trust">
+            <div class="t"><b>7</b><span>Live design styles</span></div>
+            <div class="t"><b>100%</b><span>Hand-coded &amp; responsive</span></div>
+            <div class="t"><b>1:1</b><span>Built around your brand</span></div>
           </div>
         </div>
-      </div>
-
-      <div class="hm-section-head" data-reveal>
-        <h2>Pick a direction</h2>
-        <p>Every card opens a full website in that style — typography, layout and even this menu adapt.</p>
-      </div>
-      <div class="hm-gallery">
-        <a class="hm-style" href="#dark" data-route="dark" data-reveal><span class="hm-prev prev-dark"><span class="pl"></span><span class="pl s"></span><span class="pr"><span></span><span></span><span></span></span></span><span class="meta"><span><b>Dark</b><small>Tech, SaaS, nightlife</small></span><span class="go"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a>
-        <a class="hm-style" href="#light" data-route="light" data-reveal><span class="hm-prev prev-light"><span class="pl"></span><span class="pl s"></span><span class="pr"><span></span><span></span><span></span></span></span><span class="meta"><span><b>Light</b><small>Clean, editorial, calm</small></span><span class="go"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a>
-        <a class="hm-style" href="#modern" data-route="modern" data-reveal><span class="hm-prev prev-modern"><span class="pl"></span><span class="pl s"></span><span class="pr"><span></span><span></span><span></span></span></span><span class="meta"><span><b>Modern</b><small>Glassmorphism &amp; gradients</small></span><span class="go"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a>
-        <a class="hm-style" href="#old" data-route="old" data-reveal><span class="hm-prev prev-old"><span class="pl"></span><span class="pl s"></span><span class="pr"><span></span><span></span><span></span></span></span><span class="meta"><span><b>Old School</b><small>Retro Windows 95 UI</small></span><span class="go"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a>
-        <a class="hm-style" href="#business" data-route="business" data-reveal><span class="hm-prev prev-business"><span class="pl"></span><span class="pl s"></span><span class="pr"><span></span><span></span><span></span></span></span><span class="meta"><span><b>Business</b><small>Corporate &amp; trustworthy</small></span><span class="go"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a>
-        <a class="hm-style" href="#sport" data-route="sport" data-reveal><span class="hm-prev prev-sport"><span class="pl"></span><span class="pl s"></span><span class="pr"><span></span><span></span><span></span></span></span><span class="meta"><span><b>Sport</b><small>Energetic &amp; dynamic</small></span><span class="go"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a>
-        <a class="hm-style" href="#ngo" data-route="ngo" data-reveal><span class="hm-prev prev-ngo"><span class="pl"></span><span class="pl s"></span><span class="pr"><span></span><span></span><span></span></span></span><span class="meta"><span><b>NGO</b><small>Warm, social, non-profit</small></span><span class="go"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a>
-      </div>
-
-      <div class="hm-section-head" data-reveal><h2>What I bring to every build</h2><p>Reusable engineering underneath, a bespoke result on top.</p></div>
-      <div class="hm-cap">
-        <div class="item" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-layout"/></svg><div><h3>Bespoke design</h3><p>Layout and visual language built around your brand and goals.</p></div></div>
-        <div class="item" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-devices"/></svg><div><h3>Truly responsive</h3><p>Tested on phone, tablet and desktop — never just shrunk.</p></div></div>
-        <div class="item" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg><div><h3>Fast &amp; clean</h3><p>Lightweight code, strong SEO foundations, quick to load.</p></div></div>
-        <div class="item" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><div><h3>Accessible</h3><p>Good contrast, keyboard support and semantic structure.</p></div></div>
-      </div>
-
-      <div class="hm-section-head" data-reveal><h2>How we work together</h2><p>A clear, four-step process from first call to launch.</p></div>
-      <div class="hm-steps">
-        <div class="hm-step" data-reveal><h3>Discovery</h3><p>We define your audience, goals and the message that has to land.</p></div>
-        <div class="hm-step" data-reveal><h3>Design</h3><p>You get a tailored concept and review it before a single line ships.</p></div>
-        <div class="hm-step" data-reveal><h3>Build</h3><p>Clean, hand-coded pages — responsive, fast and accessible.</p></div>
-        <div class="hm-step" data-reveal><h3>Launch</h3><p>Go live with care, plus guidance so you can keep it growing.</p></div>
-      </div>
-
-      <div class="hm-cta" data-reveal>
-        <h2>Have a project in mind? Let's design it properly.</h2>
-        <p>Tell me about your business and I'll show you exactly how your site could look and work — no obligation.</p>
-        <a class="btn primary" href="#business" data-route="business">Start the conversation <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </div>
-
-      <footer class="foot">
-        <div class="foot-grid">
-          <div><h4>Webdesign Studio</h4><p>Freelance web design &amp; front-end development. Distinct websites for distinct brands — built by hand, made to last.</p>
-            <div class="foot-soc">
-              <a href="#home" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#s-instagram"/></svg></a>
-              <a href="#home" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#s-linkedin"/></svg></a>
-              <a href="#home" aria-label="X"><svg class="icon" aria-hidden="true"><use href="#s-x"/></svg></a>
+        <div class="hm-mock" data-reveal aria-hidden="true">
+          <div class="w w-dark">
+            <div class="bar"><i></i><i></i><i></i></div>
+            <div class="body"><span class="dl g"></span><span class="dl"></span><span class="dchart"></span></div>
+          </div>
+          <div class="w w-grad">
+            <span class="gbar"></span><span class="gline"></span><span class="gline s"></span><span class="gcard"></span>
+          </div>
+          <div class="w w-main">
+            <div class="bar"><i></i><i></i><i></i><span class="url"></span></div>
+            <div class="body">
+              <span class="mhead"></span>
+              <span class="mline s"></span><span class="mline xs"></span>
+              <span class="mrow"><span class="mcard"></span><span class="mcard"></span><span class="mcard"></span></span>
             </div>
           </div>
-          <div><h4>Demos</h4><ul><li><a href="#dark" data-route="dark">Dark</a></li><li><a href="#light" data-route="light">Light</a></li><li><a href="#modern" data-route="modern">Modern</a></li><li><a href="#business" data-route="business">Business</a></li></ul></div>
-          <div><h4>Contact</h4><ul><li>hello@webdesign.studio</li><li>Mon–Fri · 9–17</li><li>Remote, worldwide</li></ul></div>
+        </div>
+      </div>
+
+      <!-- STYLE EXPLORER -->
+      <div class="hm-head" id="style-explorer" data-reveal>
+        <span class="k">Style Explorer</span>
+        <h2>Seven styles. Seven real, live demos.</h2>
+        <p>Every card opens a complete website in that style — typography, layout and even the side menu adapt. The pages in the left navigation are the live demos.</p>
+      </div>
+      <div class="hm-styles">
+        <a class="hm-card" href="#dark" data-route="dark" data-reveal>
+          <span class="hm-thumb th-dark"><span class="d1"></span><span class="d2"></span><span class="d3"></span><span class="d4"></span></span>
+          <span class="info"><span><b>Dark</b><small>Sleek, high-contrast interfaces for tech &amp; SaaS.</small></span><span class="go"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+        </a>
+        <a class="hm-card" href="#light" data-route="light" data-reveal>
+          <span class="hm-thumb th-light"><span class="l1"></span><span class="l2"></span><span class="l3"></span><span class="l4"></span></span>
+          <span class="info"><span><b>Light</b><small>Clean, airy and editorial — content first.</small></span><span class="go"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+        </a>
+        <a class="hm-card" href="#modern" data-route="modern" data-reveal>
+          <span class="hm-thumb th-modern"><span class="m-blob"></span><span class="m-pill"></span><span class="m-glass"></span></span>
+          <span class="info"><span><b>Modern</b><small>Glassmorphism, gradients and bold motion.</small></span><span class="go"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+        </a>
+        <a class="hm-card" href="#old" data-route="old" data-reveal>
+          <span class="hm-thumb th-old"><span class="o-win"><span class="o-tb"></span><span class="o-row"><span></span><span></span></span></span></span>
+          <span class="info"><span><b>Old School</b><small>Nostalgic Windows 95 retro computing.</small></span><span class="go"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+        </a>
+        <a class="hm-card" href="#business" data-route="business" data-reveal>
+          <span class="hm-thumb th-business"><span class="b-side"></span><span class="b-top"></span><span class="b-bars"><i></i><i></i><i></i><i></i></span></span>
+          <span class="info"><span><b>Business</b><small>Corporate, structured and trustworthy.</small></span><span class="go"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+        </a>
+        <a class="hm-card" href="#sport" data-route="sport" data-reveal>
+          <span class="hm-thumb th-sport"><span class="s-stripe"></span><span class="s-bar"></span><span class="s-dot"></span></span>
+          <span class="info"><span><b>Sport</b><small>Energetic, dynamic and full of motion.</small></span><span class="go"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+        </a>
+        <a class="hm-card" href="#ngo" data-route="ngo" data-reveal>
+          <span class="hm-thumb th-ngo"><span class="n-card"><span class="n-line"></span><span class="n-track"><i></i></span><span class="n-row"></span></span></span>
+          <span class="info"><span><b>NGO</b><small>Warm, social and built to mobilise people.</small></span><span class="go"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+        </a>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="hm-head" data-reveal>
+        <span class="k">What I do</span>
+        <h2>Everything your website needs — done properly.</h2>
+        <p>Bespoke design and clean front-end development, tailored to your goals.</p>
+      </div>
+      <div class="hm-serv">
+        <div class="s" data-reveal><span class="ic"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg></span><h3>Custom Website Design</h3><p>A unique design built around your brand — never a recycled template.</p></div>
+        <div class="s" data-reveal><span class="ic"><svg class="icon" aria-hidden="true"><use href="#i-devices"/></svg></span><h3>Responsive Development</h3><p>Hand-coded layouts that feel right on phone, tablet and desktop.</p></div>
+        <div class="s" data-reveal><span class="ic"><svg class="icon" aria-hidden="true"><use href="#i-rocket"/></svg></span><h3>Landing Pages</h3><p>Focused, high-converting pages built around a single clear goal.</p></div>
+        <div class="s" data-reveal><span class="ic"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg></span><h3>Business Websites</h3><p>Professional, structured sites that build trust and win clients.</p></div>
+        <div class="s" data-reveal><span class="ic"><svg class="icon" aria-hidden="true"><use href="#i-share"/></svg></span><h3>Social Media Integration</h3><p>Feeds, share actions and channel links woven into the design.</p></div>
+        <div class="s" data-reveal><span class="ic"><svg class="icon" aria-hidden="true"><use href="#i-gauge"/></svg></span><h3>Performance Optimization</h3><p>Lightweight, fast-loading pages with solid SEO foundations.</p></div>
+      </div>
+
+      <!-- PROCESS -->
+      <div class="hm-head" data-reveal>
+        <span class="k">How it works</span>
+        <h2>From first idea to launch in four steps.</h2>
+        <p>A clear, calm process — you always know what happens next.</p>
+      </div>
+      <div class="hm-steps">
+        <div class="hm-step" data-reveal><h3>Tell me your idea</h3><p>Share your business, goals and the feeling you want your site to give.</p></div>
+        <div class="hm-step" data-reveal><h3>Design direction</h3><p>I craft a tailored concept and visual direction for you to review.</p></div>
+        <div class="hm-step" data-reveal><h3>Development</h3><p>Clean, hand-coded build — responsive, fast and accessible.</p></div>
+        <div class="hm-step" data-reveal><h3>Launch</h3><p>We go live together, with guidance for what comes next.</p></div>
+      </div>
+
+      <!-- FINAL CTA -->
+      <div class="hm-final" data-reveal>
+        <h2>Your website should look like your business — not like a template.</h2>
+        <p>Let's design something that's unmistakably yours.</p>
+        <a class="hm-btn" href="https://de.fiverr.com/kuratleflorian/build-your-professional-website?ref_ctx_id=336a73b4a67f4a9f82f2311ffd5e2c69&amp;pckg_id=1&amp;source=seller_page" target="_blank" rel="noopener noreferrer">Let's build your website <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="foot">
+        <div class="foot-grid">
+          <div>
+            <h4>Webdesign Studio</h4>
+            <p>Freelance web design &amp; front-end development. Distinct, hand-built websites tailored to each brand.</p>
+            <div class="foot-soc">
+              <a href="https://de.fiverr.com/kuratleflorian/build-your-professional-website?ref_ctx_id=336a73b4a67f4a9f82f2311ffd5e2c69&amp;pckg_id=1&amp;source=seller_page" target="_blank" rel="noopener noreferrer" aria-label="Fiverr"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg></a>
+              <a href="#home" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#s-linkedin"/></svg></a>
+              <a href="#home" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#s-instagram"/></svg></a>
+            </div>
+          </div>
+          <div>
+            <h4>Services</h4>
+            <ul>
+              <li>Custom Website Design</li>
+              <li>Responsive Development</li>
+              <li>Landing Pages</li>
+              <li>Business Websites</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Style Demos</h4>
+            <ul>
+              <li><a href="#dark" data-route="dark">Dark</a></li>
+              <li><a href="#light" data-route="light">Light</a></li>
+              <li><a href="#modern" data-route="modern">Modern</a></li>
+              <li><a href="#old" data-route="old">Old School</a></li>
+              <li><a href="#business" data-route="business">Business</a></li>
+              <li><a href="#sport" data-route="sport">Sport</a></li>
+              <li><a href="#ngo" data-route="ngo">NGO</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="https://de.fiverr.com/kuratleflorian/build-your-professional-website?ref_ctx_id=336a73b4a67f4a9f82f2311ffd5e2c69&amp;pckg_id=1&amp;source=seller_page" target="_blank" rel="noopener noreferrer">Hire me on Fiverr</a></li>
+              <li>Mon–Fri · 9–17</li>
+              <li>Remote, worldwide</li>
+            </ul>
+          </div>
         </div>
         <div class="foot-bar"><span>© Webdesign Studio</span><span>Web design tailored to your vision.</span></div>
       </footer>
+
     </div>
   </section>
 
