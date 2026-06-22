@@ -154,17 +154,13 @@ body[data-theme="light"]{
   --sidebar:#23262b;--sidebar-fg:#a39d92;--sidebar-active:#c2b29a;--sidebar-brand:#f7f4ee;--focus:#8a7c68;
 }
 body[data-theme="modern"]{
-  --bg:#0b0916;--bg2:#161330;--fg:#f3effd;--muted:#b3a9d8;
-  --accent:#b14bff;--accent2:#ff4dcf;--card:rgba(255,255,255,.045);--card-border:rgba(255,255,255,.12);
+  --bg:#080611;--bg2:#141029;--fg:#f4f1ff;--muted:#a9a2cf;
+  --accent:#a855f7;--accent2:#22d3ee;--card:rgba(255,255,255,.05);--card-border:rgba(255,255,255,.12);
   --radius:22px;--font:'Space Grotesk',sans-serif;--font-head:'Space Grotesk',sans-serif;
-  --sidebar:#0a0814;--sidebar-fg:#b3a8da;--sidebar-active:#d98bff;--sidebar-brand:#fff;--focus:#d98bff;
+  --sidebar:#0a0816;--sidebar-fg:#b3a8da;--sidebar-active:#c79bff;--sidebar-brand:#fff;--focus:#c79bff;
 }
 body[data-theme="modern"]{
-  background:
-    radial-gradient(900px 520px at 10% -8%,rgba(177,75,255,.32),transparent 60%),
-    radial-gradient(820px 520px at 98% 4%,rgba(255,77,207,.24),transparent 55%),
-    radial-gradient(760px 640px at 60% 116%,rgba(80,120,255,.20),transparent 60%),
-    var(--bg);
+  background:radial-gradient(1100px 640px at 50% -12%,rgba(59,107,255,.12),transparent 62%),var(--bg);
 }
 body[data-theme="old"]{
   --bg:#0a8f88;--bg2:#c3c7cb;--fg:#0a0a0a;--muted:#2a2a2a;
@@ -616,54 +612,191 @@ body[data-theme="light"] .btn.ghost:hover{border-color:var(--fg)}
 /* =====================================================================
    MODERN — glassmorphism, asymmetric, overlapping
    ===================================================================== */
-body[data-theme="modern"] .md-hero{position:relative;padding:70px 0 30px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
-body[data-theme="modern"] .md-hero h1{font-size:clamp(40px,6vw,72px);line-height:1.0;letter-spacing:-.03em;font-weight:700;
-  background:linear-gradient(118deg,#ffffff,#e3c4ff 42%,#ff9ae6);-webkit-background-clip:text;background-clip:text;color:transparent}
-body[data-theme="modern"] .md-lead{color:var(--muted);font-size:19px;line-height:1.6;margin-top:20px;max-width:520px}
-.md-glass{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:22px}
-.md-stack{position:relative;height:340px}
-.md-card{position:absolute;padding:20px;border-radius:20px;width:230px;box-shadow:0 24px 60px rgba(0,0,0,.4)}
-.md-card .icon{width:26px;height:26px;color:#fff}
-.md-card b{display:block;margin-top:12px;font-size:16px}
-.md-card span{font-size:12.5px;color:var(--muted)}
-.md-c1{top:10px;left:0;background:linear-gradient(150deg,rgba(177,75,255,.9),rgba(120,60,220,.7))}
-.md-c2{top:96px;right:6px;background:linear-gradient(150deg,rgba(255,77,207,.85),rgba(220,40,150,.65))}
-.md-c3{bottom:6px;left:48px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16)}
-@media (prefers-reduced-motion: no-preference){
-  .md-c1{animation:floaty 7s ease-in-out infinite}
-  .md-c2{animation:floaty 8s ease-in-out infinite .6s}
-  .md-c3{animation:floaty 9s ease-in-out infinite 1.2s}
-  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-}
-
-.md-marquee{overflow:hidden;margin-top:40px;border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);padding:16px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
-.md-track{display:flex;gap:46px;width:max-content;align-items:center}
-@media (prefers-reduced-motion: no-preference){.md-track{animation:scrollx 26s linear infinite}}
-@keyframes scrollx{to{transform:translateX(-50%)}}
-.md-track span{font-family:'Space Grotesk';font-weight:600;font-size:18px;color:var(--muted);opacity:.8;white-space:nowrap;display:flex;align-items:center;gap:10px}
-.md-track .icon{width:18px;height:18px;color:var(--accent)}
-
-.md-show{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:24px}
-.md-tile{padding:26px;border-radius:22px;position:relative;overflow:hidden}
-.md-tile.glass{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);transition:transform .25s,background .25s}
-.md-tile.glass:hover{transform:translateY(-5px);background:rgba(255,255,255,.09)}
-.md-a{grid-column:span 4}.md-b{grid-column:span 2}.md-c{grid-column:span 2}.md-d{grid-column:span 4}
-.md-tile .icon{width:28px;height:28px;color:#e9a8ff}
-.md-tile h3{font-size:19px;margin:14px 0 8px}
-.md-tile p{color:var(--muted);font-size:14px;line-height:1.6}
-.md-grad{background:linear-gradient(135deg,rgba(177,75,255,.5),rgba(255,77,207,.4));border:1px solid rgba(255,255,255,.14)}
-
-.md-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;text-align:center}
-.md-stats .s{padding:24px}
-.md-stats b{font-size:42px;font-weight:700;background:linear-gradient(120deg,#fff,#ff9ae6);-webkit-background-clip:text;background-clip:text;color:transparent}
-.md-stats span{display:block;color:var(--muted);font-size:13.5px;margin-top:4px}
-body[data-theme="modern"] .btn.primary{background:linear-gradient(120deg,#b14bff,#ff4dcf);box-shadow:0 14px 36px rgba(177,75,255,.4)}
-body[data-theme="modern"] .btn.ghost{border-color:rgba(255,255,255,.22);color:#fff}
-.md-cta{margin-top:54px;text-align:center;padding:54px 30px;border-radius:26px}
-.md-cta h2{font-size:clamp(26px,3.6vw,42px);font-weight:700;background:linear-gradient(120deg,#fff,#e3c4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.md-cta p{color:var(--muted);max-width:480px;margin:14px auto 0;line-height:1.6}
-.md-cta .cta-row{justify-content:center}
+/* MODERN — Prisma Flow (creative AI platform) */
+body[data-theme="modern"] .main{position:relative;z-index:1}
+body[data-theme="modern"] .btn.primary{background:linear-gradient(120deg,#a855f7,#ec4899 58%,#22d3ee);color:#fff;border:0;box-shadow:0 14px 40px rgba(168,85,247,.4)}
+body[data-theme="modern"] .btn.primary:hover{box-shadow:0 18px 50px rgba(168,85,247,.55)}
+body[data-theme="modern"] .btn.ghost{border-color:rgba(255,255,255,.22);color:#fff;background:rgba(255,255,255,.05)}
 body[data-theme="modern"] .foot-soc a{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)}
+
+/* drifting gradient orbs (soft light surfaces) */
+.pf-orbs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.pf-orb{position:absolute;border-radius:50%;filter:blur(72px);opacity:.5;will-change:transform}
+.pf-o1{width:540px;height:540px;background:radial-gradient(circle,#a855f7,transparent 70%);left:-8%;top:-14%}
+.pf-o2{width:480px;height:480px;background:radial-gradient(circle,#22d3ee,transparent 70%);right:-10%;top:-2%}
+.pf-o3{width:520px;height:520px;background:radial-gradient(circle,#ec4899,transparent 70%);left:24%;bottom:-20%}
+.pf-o4{width:440px;height:440px;background:radial-gradient(circle,#3b6bff,transparent 70%);right:14%;bottom:-12%}
+@media (prefers-reduced-motion: no-preference){
+  .pf-o1{animation:pfd1 28s ease-in-out infinite}.pf-o2{animation:pfd2 33s ease-in-out infinite}
+  .pf-o3{animation:pfd3 37s ease-in-out infinite}.pf-o4{animation:pfd4 31s ease-in-out infinite}
+}
+@keyframes pfd1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(46px,34px) scale(1.06)}}
+@keyframes pfd2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-42px,30px) scale(1.08)}}
+@keyframes pfd3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(34px,-30px) scale(1.05)}}
+@keyframes pfd4{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-30px,-22px) scale(1.07)}}
+
+/* hero */
+body[data-theme="modern"] .pf-hero{display:grid;grid-template-columns:1fr 1.08fr;gap:46px;align-items:center;padding:60px 0 30px}
+.pf-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#dcc6ff;background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.32);padding:7px 14px;border-radius:99px}
+.pf-eyebrow .icon{width:15px;height:15px}
+body[data-theme="modern"] .pf-hero h1{font-size:clamp(38px,5.4vw,70px);line-height:1.03;letter-spacing:-.03em;font-weight:700;margin-top:22px;background:linear-gradient(118deg,#fff 28%,#dabbff 58%,#8fe9ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pf-lead{color:#c3bce6;font-size:clamp(16px,1.5vw,19px);line-height:1.65;margin-top:20px;max-width:500px}
+.pf-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.pf-trust-mini{display:flex;align-items:center;gap:11px;margin-top:28px;font-size:13px;color:#a9a2cf}
+.pf-avatars{display:flex}
+.pf-avatars i{width:27px;height:27px;border-radius:50%;border:2px solid #0a0816;margin-left:-9px;background:linear-gradient(135deg,#a855f7,#22d3ee)}
+.pf-avatars i:first-child{margin-left:0}
+.pf-avatars i:nth-child(2){background:linear-gradient(135deg,#ec4899,#a855f7)}.pf-avatars i:nth-child(3){background:linear-gradient(135deg,#3b6bff,#22d3ee)}
+
+/* hero app surface */
+.pf-app{position:relative;border-radius:22px;padding:13px;background:linear-gradient(160deg,rgba(24,20,44,.82),rgba(13,11,26,.78));backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.13);box-shadow:0 44px 100px rgba(0,0,0,.55);transition:transform .35s ease;transform-style:preserve-3d}
+.pf-app::before{content:"";position:absolute;inset:0;border-radius:22px;padding:1px;background:linear-gradient(150deg,rgba(168,85,247,.8),transparent 42%,transparent 64%,rgba(34,211,238,.7));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.pf-app-bar{display:flex;align-items:center;gap:10px;padding:5px 6px 12px}
+.pf-app-bar .dots{display:flex;gap:6px}.pf-app-bar .dots i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.2)}
+.pf-app-bar .nm{font-size:12.5px;font-weight:600;color:#ece7ff;display:flex;align-items:center;gap:7px}.pf-app-bar .nm .icon{width:15px;height:15px;color:#c9a8ff}
+.pf-app-bar .who{margin-left:auto;display:flex}.pf-app-bar .who i{width:21px;height:21px;border-radius:50%;margin-left:-7px;border:2px solid #14122a;background:linear-gradient(135deg,#a855f7,#22d3ee)}
+.pf-app-body{display:grid;gap:10px}
+.pf-prompt{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:11px 12px}
+.pf-prompt .ico{width:18px;height:18px;color:#22d3ee;flex-shrink:0}
+.pf-prompt .txt{font-size:12.5px;color:#cbc5e8;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pf-prompt .gen{font-size:11px;font-weight:700;color:#fff;padding:6px 12px;border-radius:8px;background:linear-gradient(120deg,#a855f7,#ec4899);white-space:nowrap}
+.pf-row2{display:grid;grid-template-columns:1.25fr .9fr;gap:10px}
+.pf-canvas{border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:11px}
+.pf-canvas .pic{height:84px;border-radius:9px;background:linear-gradient(135deg,#7c3aed,#ec4899 55%,#22d3ee);position:relative;overflow:hidden}
+.pf-canvas .pic::after{content:"AI generated";position:absolute;top:7px;right:7px;font-size:8.5px;font-weight:700;color:#fff;background:rgba(0,0,0,.28);padding:3px 7px;border-radius:6px;letter-spacing:.03em}
+.pf-canvas .ttl{height:9px;width:72%;border-radius:5px;background:rgba(255,255,255,.55);margin-top:11px}
+.pf-canvas .ln{height:6px;border-radius:4px;background:rgba(255,255,255,.2);margin-top:7px}.pf-canvas .ln.s{width:78%}
+.pf-side{display:grid;gap:10px;align-content:start}
+.pf-mini{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:11px;padding:10px}
+.pf-mini .lab{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#8e87b3;display:block;margin-bottom:8px}
+.pf-swatches{display:flex;gap:6px}.pf-swatches i{width:18px;height:18px;border-radius:6px}
+.pf-swatches i:nth-child(1){background:#a855f7}.pf-swatches i:nth-child(2){background:#22d3ee}.pf-swatches i:nth-child(3){background:#ec4899}.pf-swatches i:nth-child(4){background:#3b6bff}
+.pf-cmt{display:flex;align-items:center;gap:7px;font-size:10.5px;color:#cbc5e8}.pf-cmt+.pf-cmt{margin-top:7px}
+.pf-cmt i{width:16px;height:16px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#ec4899,#a855f7)}
+.pf-cmt:nth-child(3) i{background:linear-gradient(135deg,#3b6bff,#22d3ee)}
+.pf-exp{display:flex;gap:6px;flex-wrap:wrap}.pf-exp span{font-size:9px;color:#d7d2f0;padding:4px 8px;border-radius:7px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+
+/* section heading */
+.pf-h{max-width:620px;margin:96px 0 30px}
+.pf-h .k{display:block;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#cdb6ff;margin-bottom:12px}
+.pf-h h2{font-size:clamp(26px,3.4vw,42px);font-weight:700;letter-spacing:-.025em;line-height:1.08;background:linear-gradient(120deg,#fff,#dcc6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pf-h p{color:#a9a2cf;font-size:15.5px;line-height:1.65;margin-top:13px}
+
+/* bento grid */
+.pf-bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.pf-tile{position:relative;overflow:hidden;border-radius:20px;padding:24px;background:linear-gradient(160deg,rgba(255,255,255,.075),rgba(255,255,255,.025));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);transition:transform .3s ease,border-color .3s,box-shadow .3s}
+.pf-tile:hover{transform:translateY(-5px);border-color:rgba(168,85,247,.45);box-shadow:0 24px 54px rgba(168,85,247,.16)}
+.pf-tile .ic{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:rgba(168,85,247,.16);border:1px solid rgba(168,85,247,.3);color:#dcc6ff;margin-bottom:14px}
+.pf-tile .ic .icon{width:21px;height:21px}
+.pf-tile h3{font-size:18px;font-weight:600}
+.pf-tile p{color:#a9a2cf;font-size:13.5px;line-height:1.55;margin-top:7px}
+.pf-f1{grid-column:span 4}.pf-f2{grid-column:span 2}.pf-f3{grid-column:span 3}.pf-f4{grid-column:span 3}.pf-f5{grid-column:span 2}.pf-f6{grid-column:span 4}
+.pf-vis{margin-top:16px}
+.pf-vis-campaign{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.pf-vis-campaign i{height:52px;border-radius:9px}
+.pf-vis-campaign i:nth-child(1){background:linear-gradient(135deg,#7c3aed,#ec4899)}.pf-vis-campaign i:nth-child(2){background:linear-gradient(135deg,#3b6bff,#22d3ee)}.pf-vis-campaign i:nth-child(3){background:linear-gradient(135deg,#ec4899,#a855f7)}
+.pf-vis-brand{display:flex;align-items:center;gap:10px}
+.pf-vis-brand .sw{display:flex;gap:6px}.pf-vis-brand .sw i{width:24px;height:24px;border-radius:7px}
+.pf-vis-brand .sw i:nth-child(1){background:#a855f7}.pf-vis-brand .sw i:nth-child(2){background:#22d3ee}.pf-vis-brand .sw i:nth-child(3){background:#ec4899}
+.pf-vis-brand .aa{font-weight:700;font-size:16px;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:3px 10px}
+.pf-vis-cursors{position:relative;height:56px}
+.pf-vis-cursors .cur{position:absolute;font-size:10.5px;font-weight:600;color:#fff;padding:3px 9px;border-radius:99px}
+.pf-vis-cursors .c1{left:4px;top:6px;background:#a855f7}.pf-vis-cursors .c2{right:8px;bottom:6px;background:#22d3ee;color:#06121a}
+.pf-vis-platforms{display:flex;flex-wrap:wrap;gap:8px}
+.pf-vis-platforms span{width:36px;height:36px;border-radius:9px;display:grid;place-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#d7d2f0}
+.pf-vis-platforms .icon{width:18px;height:18px}
+.pf-vis-chart{display:flex;align-items:flex-end;gap:6px;height:56px}
+.pf-vis-chart i{flex:1;border-radius:4px 4px 0 0;background:linear-gradient(180deg,#22d3ee,rgba(34,211,238,.18))}
+.pf-vis-flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pf-vis-flow span{font-size:11px;color:#d7d2f0;padding:6px 11px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.pf-vis-flow .ar{color:#8e87b3}
+
+/* interactive workflow */
+.pf-flow{background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:36px 30px}
+.pf-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative}
+.pf-steps::before{content:"";position:absolute;top:23px;left:12.5%;right:12.5%;height:2px;background:rgba(255,255,255,.12)}
+.pf-steps::after{content:"";position:absolute;top:23px;left:12.5%;width:var(--pf-prog,0%);height:2px;background:linear-gradient(90deg,#a855f7,#22d3ee);transition:width .5s cubic-bezier(.3,.7,.3,1)}
+.pf-step{position:relative;text-align:center;cursor:pointer;padding:6px}
+.pf-step .dot{width:46px;height:46px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;background:#15122b;border:1px solid rgba(255,255,255,.16);color:#c9c3e8;transition:transform .4s,box-shadow .4s,background .4s}
+.pf-step .dot .icon{width:20px;height:20px}
+.pf-step .nm{font-weight:600;font-size:15px;transition:color .3s}
+.pf-step .ds{font-size:12.5px;color:#a9a2cf;margin-top:7px;line-height:1.5}
+.pf-step.active .dot{background:linear-gradient(135deg,#a855f7,#22d3ee);border-color:transparent;color:#fff;box-shadow:0 0 30px rgba(168,85,247,.5);transform:scale(1.1)}
+.pf-step.active .nm{color:#fff}
+
+/* template showcase (bounded horizontal scroll) */
+.pf-tpl-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:22px}
+.pf-tpl-nav{display:flex;gap:10px}
+.pf-tpl-nav button{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#fff;cursor:pointer;transition:.2s}
+.pf-tpl-nav button:hover{background:rgba(168,85,247,.25);border-color:rgba(168,85,247,.5)}
+.pf-tpl-nav button .icon{width:18px;height:18px}
+.pf-tpl-nav button.prev .icon{transform:rotate(180deg)}
+.pf-tpl-scroll{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 18px;scrollbar-width:thin;scrollbar-color:rgba(168,85,247,.5) transparent}
+.pf-tpl-scroll::-webkit-scrollbar{height:7px}
+.pf-tpl-scroll::-webkit-scrollbar-thumb{background:rgba(168,85,247,.45);border-radius:99px}
+.pf-tpl-scroll::-webkit-scrollbar-track{background:rgba(255,255,255,.05);border-radius:99px}
+.pf-tpl{flex:0 0 300px;scroll-snap-align:start;border-radius:18px;overflow:hidden;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);transition:transform .3s,border-color .3s}
+.pf-tpl:hover{transform:translateY(-4px);border-color:rgba(34,211,238,.4)}
+.pf-tpl .pic{height:188px;position:relative;overflow:hidden;padding:18px;display:flex;flex-direction:column;justify-content:flex-end}
+.pf-tpl .pic .tag{position:absolute;top:14px;left:14px;font-size:10px;font-weight:600;letter-spacing:.04em;color:#fff;background:rgba(0,0,0,.28);padding:4px 9px;border-radius:7px}
+.pf-tpl .pic .bar{height:10px;width:60%;border-radius:5px;background:rgba(255,255,255,.85)}
+.pf-tpl .pic .bar.s{width:42%;height:7px;margin-top:8px;background:rgba(255,255,255,.55)}
+.pf-tpl-1 .pic{background:linear-gradient(150deg,#7c3aed,#3b6bff)}
+.pf-tpl-2 .pic{background:linear-gradient(150deg,#ec4899,#a855f7)}
+.pf-tpl-3 .pic{background:linear-gradient(150deg,#22d3ee,#3b6bff)}
+.pf-tpl-4 .pic{background:linear-gradient(150deg,#a855f7,#22d3ee 55%,#ec4899)}
+.pf-tpl .meta{padding:16px 18px}
+.pf-tpl .meta .cat{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#9d96c4}
+.pf-tpl .meta h3{font-size:18px;font-weight:600;margin-top:5px}
+
+/* social proof */
+.pf-proof-big{font-size:clamp(22px,3vw,34px);font-weight:700;letter-spacing:-.02em;text-align:center;background:linear-gradient(120deg,#fff,#dcc6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pf-quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+.pf-quote{background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:22px}
+.pf-quote p{font-size:14.5px;line-height:1.6;color:#e4e0f4}
+.pf-quote .by{display:flex;align-items:center;gap:10px;margin-top:16px}
+.pf-quote .by i{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#a855f7,#22d3ee);flex-shrink:0}
+.pf-quote .by b{font-size:13px}.pf-quote .by small{display:block;color:#9d96c4;font-size:11.5px}
+.pf-logos{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;margin-top:34px;padding:24px 6px;border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border)}
+.pf-logos .lg{font-weight:700;font-size:17px;letter-spacing:-.01em;color:#7e78a6;opacity:.85;transition:.2s}
+.pf-logos .lg:hover{color:#e4e0f4;opacity:1}
+
+/* pricing (compact) */
+.pf-pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:880px;margin:0 auto}
+.pf-plan{background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:24px;display:flex;flex-direction:column}
+.pf-plan.feat{border-color:rgba(168,85,247,.5);box-shadow:0 0 0 1px rgba(168,85,247,.3),0 24px 60px rgba(168,85,247,.16);background:linear-gradient(160deg,rgba(168,85,247,.14),rgba(34,211,238,.06))}
+.pf-plan .tier{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#cdb6ff;display:flex;align-items:center;gap:8px}
+.pf-plan .tier .badge{font-size:9px;padding:2px 7px;border-radius:99px;background:linear-gradient(120deg,#a855f7,#22d3ee);color:#fff;letter-spacing:.04em}
+.pf-plan .price{font-size:32px;font-weight:700;margin:12px 0 2px}.pf-plan .price small{font-size:13px;color:#9d96c4;font-weight:400}
+.pf-plan ul{list-style:none;display:grid;gap:8px;margin:14px 0 18px}
+.pf-plan li{display:flex;gap:9px;font-size:13px;color:#cbc5e8}.pf-plan li .icon{width:16px;height:16px;color:#22d3ee;flex-shrink:0}
+.pf-plan .btn{margin-top:auto;width:100%;justify-content:center}
+
+/* final cta */
+.pf-cta{margin-top:84px;border-radius:26px;text-align:center;padding:clamp(44px,6vw,74px) clamp(28px,5vw,56px);position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:linear-gradient(140deg,rgba(168,85,247,.2),rgba(59,107,255,.1) 50%,rgba(34,211,238,.16))}
+.pf-cta h2{font-size:clamp(28px,4vw,48px);font-weight:700;letter-spacing:-.025em;line-height:1.08;background:linear-gradient(120deg,#fff,#dcc6ff);-webkit-background-clip:text;background-clip:text;color:transparent;max-width:16ch;margin:0 auto}
+.pf-cta p{color:#c3bce6;max-width:480px;margin:14px auto 0;font-size:16px;line-height:1.6}
+.pf-cta .cta-row{justify-content:center;margin-top:28px}
+
+@media (prefers-reduced-motion: reduce){
+  .pf-orb{animation:none!important}
+  body[data-theme="modern"] .pf-tile,.pf-tpl,.pf-app,.pf-step .dot,.pf-steps::after{transition:none!important}
+}
+@media(max-width:980px){
+  body[data-theme="modern"] .pf-hero{grid-template-columns:1fr;gap:34px}
+  .pf-bento{grid-template-columns:repeat(2,1fr)}
+  .pf-f1,.pf-f2,.pf-f3,.pf-f4,.pf-f5,.pf-f6{grid-column:span 2}
+  .pf-steps{grid-template-columns:repeat(2,1fr);gap:24px}.pf-steps::before,.pf-steps::after{display:none}
+  .pf-quotes{grid-template-columns:1fr}
+  .pf-orb{filter:blur(60px);opacity:.42}.pf-o3,.pf-o4{display:none}
+}
+@media(max-width:620px){
+  .pf-bento{grid-template-columns:1fr}.pf-f1,.pf-f2,.pf-f3,.pf-f4,.pf-f5,.pf-f6{grid-column:span 1}
+  .pf-row2{grid-template-columns:1fr}
+  .pf-pricing{grid-template-columns:1fr;max-width:360px}
+  .pf-steps{grid-template-columns:1fr}
+  .pf-tpl{flex-basis:248px}
+}
 
 /* =====================================================================
    OLD SCHOOL — Windows 95 desktop
@@ -1465,56 +1598,164 @@ body[data-theme="ngo"] .ng-help .foot-soc a{background:rgba(255,255,255,.18);bor
   </section>
 
   <!-- ===== MODERN ===== -->
-  <section class="page" data-page="modern" aria-label="Modern style demo">
+  <section class="page" data-page="modern" aria-label="Modern style demo — Prisma Flow">
+    <div class="pf-orbs" aria-hidden="true"><span class="pf-orb pf-o1"></span><span class="pf-orb pf-o2"></span><span class="pf-orb pf-o3"></span><span class="pf-orb pf-o4"></span></div>
     <div class="wrap">
-      <div class="md-hero">
+
+      <!-- HERO -->
+      <div class="pf-hero">
         <div data-reveal>
-          <span class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg>Modern · 2026</span>
-          <h1>Bold, fluid, unmistakable</h1>
-          <p class="md-lead">Glassmorphism, vivid gradients and oversized type. The look for creators, fashion labels and apps that refuse to blend in.</p>
-          <div class="cta-row"><a class="btn primary" href="#modern">Get started <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn ghost" href="#home" data-route="home">All styles</a></div>
+          <span class="pf-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg>Prisma Flow · Creative AI Platform</span>
+          <h1>Turn ideas into content at the speed of thought.</h1>
+          <p class="pf-lead">Prisma Flow brings writing, visuals, campaigns and collaboration into one intelligent creative workspace.</p>
+          <div class="pf-actions">
+            <a class="btn primary" href="#modern">Create for free <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn ghost" href="#modern"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Watch the demo</a>
+          </div>
+          <div class="pf-trust-mini"><span class="pf-avatars"><i></i><i></i><i></i></span>Loved by 8,000+ creative teams</div>
         </div>
-        <div class="md-stack" data-reveal aria-hidden="true">
-          <div class="md-card md-c1"><svg class="icon" aria-hidden="true"><use href="#i-rocket"/></svg><b>App launch</b><span>Pre-orders +212%</span></div>
-          <div class="md-card md-c2"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg><b>Community</b><span>48k followers</span></div>
-          <div class="md-card md-c3"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg><b>Reel</b><span>2.4M views</span></div>
+        <div class="pf-app" data-tilt data-reveal aria-hidden="true">
+          <div class="pf-app-bar"><span class="dots"><i></i><i></i><i></i></span><span class="nm"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg>Prisma Flow</span><span class="who"><i></i><i></i><i></i></span></div>
+          <div class="pf-app-body">
+            <div class="pf-prompt"><svg class="icon ico" aria-hidden="true"><use href="#i-sparkle"/></svg><span class="txt">Generate a launch campaign for our new app…</span><span class="gen">Generate</span></div>
+            <div class="pf-row2">
+              <div class="pf-canvas"><div class="pic"></div><div class="ttl"></div><div class="ln"></div><div class="ln s"></div></div>
+              <div class="pf-side">
+                <div class="pf-mini"><span class="lab">Brand controls</span><div class="pf-swatches"><i></i><i></i><i></i><i></i></div></div>
+                <div class="pf-mini"><span class="lab">Team comments</span><div class="pf-cmt"><i></i>Love the hook — ship it</div><div class="pf-cmt"><i></i>Tweak the CTA colour?</div></div>
+                <div class="pf-mini"><span class="lab">Export</span><div class="pf-exp"><span>PNG</span><span>MP4</span><span>Copy</span></div></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="md-marquee" aria-hidden="true">
-        <div class="md-track">
-          <span><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg>Lookbooks</span><span><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg>App launches</span><span><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>Creator pages</span><span><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Product films</span><span><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg>Drops</span>
-          <span><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg>Lookbooks</span><span><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg>App launches</span><span><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>Creator pages</span><span><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Product films</span><span><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg>Drops</span>
+      <!-- BENTO FEATURES -->
+      <div class="pf-h" data-reveal>
+        <span class="k">Everything in one flow</span>
+        <h2>One workspace for the whole creative process.</h2>
+        <p>From the first prompt to published campaign — writing, visuals, brand and collaboration, together.</p>
+      </div>
+      <div class="pf-bento">
+        <div class="pf-tile pf-f1" data-reveal>
+          <span class="ic"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg></span>
+          <h3>Generate complete campaigns</h3>
+          <p>Describe an idea once and get copy, visuals and a full multi-channel campaign in seconds.</p>
+          <div class="pf-vis pf-vis-campaign"><i></i><i></i><i></i></div>
+        </div>
+        <div class="pf-tile pf-f2" data-reveal>
+          <span class="ic"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></span>
+          <h3>Keep every asset on-brand</h3>
+          <p>Colours, fonts and tone, applied automatically.</p>
+          <div class="pf-vis pf-vis-brand"><div class="sw"><i></i><i></i><i></i></div><span class="aa">Aa</span></div>
+        </div>
+        <div class="pf-tile pf-f3" data-reveal>
+          <span class="ic"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+          <h3>Collaborate in real time</h3>
+          <p>Comment, edit and review together — live cursors and all.</p>
+          <div class="pf-vis pf-vis-cursors"><span class="cur c1">Mara</span><span class="cur c2">Tom</span></div>
+        </div>
+        <div class="pf-tile pf-f4" data-reveal>
+          <span class="ic"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></span>
+          <h3>Publish everywhere</h3>
+          <p>Push to every channel from one place, perfectly sized.</p>
+          <div class="pf-vis pf-vis-platforms"><span><svg class="icon" aria-hidden="true"><use href="#s-instagram"/></svg></span><span><svg class="icon" aria-hidden="true"><use href="#s-tiktok"/></svg></span><span><svg class="icon" aria-hidden="true"><use href="#s-youtube"/></svg></span><span><svg class="icon" aria-hidden="true"><use href="#s-linkedin"/></svg></span><span><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></span></div>
+        </div>
+        <div class="pf-tile pf-f5" data-reveal>
+          <span class="ic"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></span>
+          <h3>Analyse performance</h3>
+          <p>See what works, instantly.</p>
+          <div class="pf-vis pf-vis-chart"><i style="height:42%"></i><i style="height:64%"></i><i style="height:50%"></i><i style="height:80%"></i><i style="height:66%"></i><i style="height:96%"></i></div>
+        </div>
+        <div class="pf-tile pf-f6" data-reveal>
+          <span class="ic"><svg class="icon" aria-hidden="true"><use href="#i-folder"/></svg></span>
+          <h3>Save reusable workflows</h3>
+          <p>Turn a winning process into a one-click template your whole team can run.</p>
+          <div class="pf-vis pf-vis-flow"><span>Idea</span><span class="ar">→</span><span>Generate</span><span class="ar">→</span><span>Publish</span></div>
         </div>
       </div>
 
-      <div class="md-show">
-        <div class="md-tile glass md-a" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-rocket"/></svg><h3>App &amp; product launches</h3><p>Scroll experiences with motion, app-store buttons and a wow moment that makes people stop and look.</p></div>
-        <div class="md-tile md-grad md-b" data-reveal><svg class="icon" aria-hidden="true" style="color:#fff"><use href="#i-sparkle"/></svg><h3 style="color:#fff">Drops</h3><p style="color:rgba(255,255,255,.85)">Hype-ready release pages with countdowns.</p></div>
-        <div class="md-tile glass md-c" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg><h3>Creator pages</h3><p>Link-in-bio and portfolios with instant impact.</p></div>
-        <div class="md-tile glass md-d" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg><h3>Fashion &amp; lifestyle</h3><p>Visual brand worlds with lookbook and shop woven together — built to be shared.</p></div>
+      <!-- INTERACTIVE WORKFLOW -->
+      <div class="pf-h" data-reveal>
+        <span class="k">How it flows</span>
+        <h2>From spark to published, in four steps.</h2>
+      </div>
+      <div class="pf-flow" data-reveal>
+        <div class="pf-steps">
+          <div class="pf-step"><div class="dot"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg></div><div class="nm">Idea</div><div class="ds">Drop a prompt or a rough note — in any language.</div></div>
+          <div class="pf-step"><div class="dot"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg></div><div class="nm">Generate</div><div class="ds">Prisma Flow drafts copy, visuals and a full campaign.</div></div>
+          <div class="pf-step"><div class="dot"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg></div><div class="nm">Refine</div><div class="ds">Tweak tone, swap assets and align it to your brand.</div></div>
+          <div class="pf-step"><div class="dot"><svg class="icon" aria-hidden="true"><use href="#i-rocket"/></svg></div><div class="nm">Publish</div><div class="ds">Ship to every channel — and measure what lands.</div></div>
+        </div>
       </div>
 
-      <div class="md-stats">
-        <div class="s" data-reveal><b>3.1s</b><span>Avg. time on page</span></div>
-        <div class="s" data-reveal><b>+212%</b><span>Launch-day pre-orders</span></div>
-        <div class="s" data-reveal><b>92</b><span>Brand-recall score</span></div>
+      <!-- TEMPLATE SHOWCASE -->
+      <div class="pf-tpl-head">
+        <div class="pf-h" style="margin:0;max-width:520px" data-reveal><span class="k">Start faster</span><h2>Templates for every moment.</h2></div>
+        <div class="pf-tpl-nav"><button class="prev" data-tpl="prev" aria-label="Previous templates"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button><button class="next" data-tpl="next" aria-label="More templates"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+      </div>
+      <div class="pf-tpl-scroll" tabindex="0" aria-label="Template gallery, scrollable">
+        <div class="pf-tpl pf-tpl-1"><div class="pic"><span class="tag">Template</span><div class="bar"></div><div class="bar s"></div></div><div class="meta"><span class="cat">Launch</span><h3>Product launch</h3></div></div>
+        <div class="pf-tpl pf-tpl-2"><div class="pic"><span class="tag">Template</span><div class="bar"></div><div class="bar s"></div></div><div class="meta"><span class="cat">Social</span><h3>Social campaign</h3></div></div>
+        <div class="pf-tpl pf-tpl-3"><div class="pic"><span class="tag">Template</span><div class="bar"></div><div class="bar s"></div></div><div class="meta"><span class="cat">Event</span><h3>Event promotion</h3></div></div>
+        <div class="pf-tpl pf-tpl-4"><div class="pic"><span class="tag">Template</span><div class="bar"></div><div class="bar s"></div></div><div class="meta"><span class="cat">Brand</span><h3>Brand story</h3></div></div>
       </div>
 
-      <div class="md-cta md-glass" data-reveal>
-        <h2>Let's make something they screenshot.</h2>
-        <p>A modern presence your audience wants to share — and remember.</p>
-        <div class="cta-row"><a class="btn primary" href="#modern">Get started <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn ghost" href="#home" data-route="home">Browse styles</a></div>
+      <!-- SOCIAL PROOF -->
+      <div class="pf-h" style="max-width:none;text-align:center;margin:96px auto 0" data-reveal>
+        <div class="pf-proof-big">Used by 8,000+ creative teams</div>
+      </div>
+      <div class="pf-quotes">
+        <figure class="pf-quote" data-reveal><p>"We shipped a full campaign before lunch — and it actually looked on-brand."</p><figcaption class="by"><i></i><div><b>Mara Devlin</b><small>Creative Lead · Lumen</small></div></figcaption></figure>
+        <figure class="pf-quote" data-reveal><p>"Prisma Flow replaced four tools in our stack. Our designers finally have room to think."</p><figcaption class="by"><i></i><div><b>Tom Reis</b><small>Design Director · Vela</small></div></figcaption></figure>
+        <figure class="pf-quote" data-reveal><p>"Everything stays consistent across every channel. Our brand has never looked tighter."</p><figcaption class="by"><i></i><div><b>Aisha Kano</b><small>Head of Marketing · Northwind</small></div></figcaption></figure>
+      </div>
+      <div class="pf-logos" data-reveal>
+        <span class="lg">Lumen</span><span class="lg">Vela</span><span class="lg">Northwind</span><span class="lg">Kontur</span><span class="lg">Aria</span><span class="lg">Pulse</span>
       </div>
 
+      <!-- PRICING -->
+      <div class="pf-h" style="text-align:center;max-width:none;margin-left:auto;margin-right:auto" data-reveal>
+        <span class="k">Pricing</span>
+        <h2>Plans that scale with your ideas.</h2>
+      </div>
+      <div class="pf-pricing">
+        <div class="pf-plan" data-reveal>
+          <div class="tier">Starter</div>
+          <div class="price">€0<small> / mo</small></div>
+          <ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>50 generations / month</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>1 brand kit</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Core templates</li></ul>
+          <a class="btn ghost" href="#modern">Start free</a>
+        </div>
+        <div class="pf-plan feat" data-reveal>
+          <div class="tier">Studio <span class="badge">Popular</span></div>
+          <div class="price">€29<small> / mo</small></div>
+          <ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Unlimited generations</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Real-time collaboration</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>All templates &amp; brand kits</li></ul>
+          <a class="btn primary" href="#modern">Choose Studio</a>
+        </div>
+        <div class="pf-plan" data-reveal>
+          <div class="tier">Scale</div>
+          <div class="price">€79<small> / mo</small></div>
+          <ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Everything in Studio</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Analytics &amp; API access</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Priority support &amp; SSO</li></ul>
+          <a class="btn ghost" href="#modern">Choose Scale</a>
+        </div>
+      </div>
+
+      <!-- FINAL CTA -->
+      <div class="pf-cta" data-reveal>
+        <h2>Your next campaign starts with one idea.</h2>
+        <p>Bring it to Prisma Flow and watch it become content in minutes.</p>
+        <div class="cta-row"><a class="btn primary" href="#modern">Start creating <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </div>
+
+      <!-- FOOTER -->
       <footer class="foot">
         <div class="foot-grid">
-          <div><h4>Modern Studio</h4><p>Eye-catching, motion-rich websites for brands that lead with their visuals.</p>
+          <div><h4>Prisma Flow</h4><p>One intelligent creative workspace for writing, visuals, campaigns and collaboration.</p>
             <div class="foot-soc"><a href="#modern" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#s-instagram"/></svg></a><a href="#modern" aria-label="TikTok"><svg class="icon" aria-hidden="true"><use href="#s-tiktok"/></svg></a><a href="#modern" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#s-youtube"/></svg></a></div></div>
-          <div><h4>Made for</h4><ul><li>Creators</li><li>Fashion &amp; lifestyle</li><li>App launches</li></ul></div>
-          <div><h4>Contact</h4><ul><li>hello@webdesign.studio</li><li>DM-friendly</li></ul></div>
+          <div><h4>Product</h4><ul><li>Campaigns</li><li>Brand kits</li><li>Templates</li><li>Integrations</li></ul></div>
+          <div><h4>Made for</h4><ul><li>Content creators</li><li>Design teams</li><li>Agencies &amp; start-ups</li></ul></div>
         </div>
-        <div class="foot-bar"><span>© Webdesign Studio · Modern</span><span>Stand out, don't blend in.</span></div>
+        <div class="foot-bar"><span>© Prisma Flow — a live Modern-style demo by Webdesign Studio</span><span>Experimental, but usable.</span></div>
       </footer>
     </div>
   </section>
@@ -1959,6 +2200,61 @@ body[data-theme="ngo"] .ng-help .foot-soc a{background:rgba(255,255,255,.18);bor
   new MutationObserver(function(){ isDark() ? activate() : deactivate(); })
     .observe(document.body, {attributes:true, attributeFilter:['data-theme']});
   if(isDark()) activate();
+})();
+</script>
+<script>
+/* PRISMA FLOW (Modern page) interactions — 3D tilt, workflow stepper, template scroll */
+(function(){
+  var modern = document.querySelector('.page[data-page="modern"]');
+  if(!modern) return;
+  var rm = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var coarse = window.matchMedia('(pointer: coarse)');
+  function isModern(){ return document.body.getAttribute('data-theme') === 'modern'; }
+
+  // gentle 3D tilt on select elements
+  if(!rm.matches && !coarse.matches){
+    modern.querySelectorAll('[data-tilt]').forEach(function(el){
+      el.addEventListener('mousemove', function(e){
+        var r = el.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - 0.5;
+        var y = (e.clientY - r.top) / r.height - 0.5;
+        el.style.transform = 'perspective(1000px) rotateX(' + (-y*5).toFixed(2) + 'deg) rotateY(' + (x*6).toFixed(2) + 'deg)';
+      });
+      el.addEventListener('mouseleave', function(){ el.style.transform = ''; });
+    });
+  }
+
+  // interactive workflow stepper (hover + slow auto-cycle)
+  var steps = Array.prototype.slice.call(modern.querySelectorAll('.pf-step'));
+  var box = modern.querySelector('.pf-steps');
+  var cur = 0, hovering = false, flowTimer = null;
+  function setStep(i){
+    cur = (i + steps.length) % steps.length;
+    steps.forEach(function(s, k){ s.classList.toggle('active', k === cur); });
+    if(box) box.style.setProperty('--pf-prog', (cur * 25) + '%');
+  }
+  steps.forEach(function(s, i){
+    s.addEventListener('mouseenter', function(){ hovering = true; setStep(i); });
+    s.addEventListener('mouseleave', function(){ hovering = false; });
+    s.addEventListener('click', function(){ setStep(i); });
+  });
+  setStep(0);
+  function startFlow(){ if(rm.matches || flowTimer) return; flowTimer = setInterval(function(){ if(!hovering) setStep(cur + 1); }, 2600); }
+  function stopFlow(){ if(flowTimer){ clearInterval(flowTimer); flowTimer = null; } }
+
+  // bounded horizontal template scroller
+  var scroller = modern.querySelector('.pf-tpl-scroll');
+  modern.querySelectorAll('[data-tpl]').forEach(function(b){
+    b.addEventListener('click', function(){
+      if(!scroller) return;
+      var dir = b.getAttribute('data-tpl') === 'next' ? 1 : -1;
+      scroller.scrollBy({ left: dir * 320, behavior: 'smooth' });
+    });
+  });
+
+  new MutationObserver(function(){ isModern() ? startFlow() : stopFlow(); })
+    .observe(document.body, {attributes:true, attributeFilter:['data-theme']});
+  if(isModern()) startFlow();
 })();
 </script>
 </body>
