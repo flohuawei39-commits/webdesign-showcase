@@ -7,7 +7,7 @@
 <meta name="description" content="Portfolio of a freelance web designer. Eight live demo websites — each a distinct, fully designed project for a different industry and audience." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&family=Press+Start+2P&display=swap" rel="stylesheet" />
 <style>
 /* ============================================================
    BASE / RESET   (shared scaffolding — kept stable across pages)
@@ -810,45 +810,147 @@ body[data-theme="old"] .nav a[aria-current="page"] .ni{color:#fff}
 body[data-theme="old"] .nav-label,body[data-theme="old"] .sidebar-foot{color:#0a0a0a}
 body[data-theme="old"] .tagline-bar{background:#c3c7cb;color:#000080;border-bottom:2px solid #808487;box-shadow:inset 0 -1px 0 #fff;font-weight:700}
 
-.win{background:#c3c7cb;box-shadow:var(--out);margin-bottom:22px}
-.win-tb{display:flex;align-items:center;justify-content:space-between;gap:8px;background:linear-gradient(90deg,#000080,#1084d0);color:#fff;font-weight:700;font-size:13px;padding:4px 4px 4px 9px}
-.win-tb .lbl{display:flex;align-items:center;gap:7px}.win-tb .lbl .icon{width:15px;height:15px}
-.win-ctrl{display:flex;gap:3px}
-.win-ctrl button{width:19px;height:17px;display:grid;place-items:center;font-size:10px;font-weight:700;background:#c3c7cb;color:#000;border:1px solid #000;box-shadow:inset -1px -1px 0 #808487,inset 1px 1px 0 #fff;line-height:1;padding:0}
-.win-ctrl button:active{box-shadow:inset 1px 1px 0 #808487,inset -1px -1px 0 #fff}
-.win-body{padding:18px}
-.os-hero h1{font-family:Tahoma,sans-serif;font-size:clamp(26px,4vw,40px);line-height:1.1;margin-bottom:12px}
-.os-hero .lead{color:#0a0a0a;line-height:1.6;max-width:620px;font-size:15px}
-body[data-theme="old"] .os-hero .eyebrow{color:#000080}
-.os-desktop{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:start}
-.os-icons{display:flex;flex-direction:column;gap:18px}
-.os-ic{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;color:#fff;width:84px;padding:6px;border:1px dotted transparent}
-.os-ic:hover,.os-ic:focus-visible{background:rgba(0,0,128,.45);border-color:#fff}
-.os-ic .glyph{width:46px;height:46px;background:#c3c7cb;box-shadow:var(--out);display:grid;place-items:center;color:#000080}
-.os-ic .glyph .icon{width:26px;height:26px}
-.os-ic span{font-size:11.5px;text-shadow:1px 1px 0 #000}
-body[data-theme="old"] .btn{border-radius:0;background:#c3c7cb;color:#000;border:1px solid #000;box-shadow:var(--out);font-weight:700}
-body[data-theme="old"] .btn:hover{transform:none;color:#000;box-shadow:var(--out)}
-body[data-theme="old"] .btn:active{box-shadow:var(--in)}
-body[data-theme="old"] .btn.primary{background:#c3c7cb;color:#000}
+/* PixelWorks 98 — functional retro desktop */
+body[data-theme="old"] .wrap{max-width:none;padding:0}
+.pw-desktop{position:relative;min-height:calc(100vh - 118px);padding:18px 18px 58px;overflow:hidden;font-family:Tahoma,'Segoe UI',Geneva,sans-serif}
+@supports not (min-height:100dvh){.pw-desktop{min-height:560px}}
 
-.os-progs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.os-prog{background:#c3c7cb;box-shadow:var(--in);padding:16px;display:flex;flex-direction:column;gap:8px}
-.os-prog .icon{width:30px;height:30px;color:#000080}
-.os-prog h3{font-size:14px;font-family:Tahoma}
-.os-prog p{font-size:12.5px;color:#1a1a1a;line-height:1.5}
-.os-fields{display:grid;gap:12px;max-width:520px}
-.os-field label{display:block;font-size:13px;margin-bottom:5px;font-weight:700}
-.os-field input,.os-field textarea{width:100%;font:inherit;font-size:13px;padding:6px 8px;background:#fff;border:1px solid #000;box-shadow:var(--in);color:#000}
-.os-note{display:flex;gap:12px;align-items:flex-start;background:#fff;box-shadow:var(--in);padding:13px;font-size:13px;line-height:1.5;color:#000}
-.os-note .icon{color:#000080;width:30px;height:30px;flex:0 0 auto}
-.os-taskbar{display:flex;align-items:center;gap:8px;margin-top:6px;background:#c3c7cb;padding:3px 4px;box-shadow:inset -1px -1px 0 #808487,inset 1px 1px 0 #fff}
-.os-start{display:inline-flex;align-items:center;gap:7px;font-weight:700;color:#000;background:#c3c7cb;border:1px solid #000;padding:4px 12px;box-shadow:var(--out)}
-.os-start:active{box-shadow:var(--in)}.os-start .icon{width:16px;height:16px;color:#000080}
-.os-tasks{flex:1;font-size:12px;color:#000;box-shadow:var(--in);padding:5px 9px;display:flex;align-items:center;gap:6px}
-.os-clock{font-size:12px;box-shadow:var(--in);padding:5px 9px;display:flex;align-items:center;gap:6px}
-body[data-theme="old"] .foot{border:0;color:#fff;margin-top:14px}
-body[data-theme="old"] .foot-bar{border-color:#0a6b66;color:#eafffe}
+/* desktop icons */
+.pw-icons{position:absolute;top:16px;left:14px;display:flex;flex-direction:column;gap:4px;z-index:1}
+.pw-ic{display:flex;flex-direction:column;align-items:center;gap:5px;width:88px;padding:8px 4px;border:1px dotted transparent;background:transparent;cursor:pointer;color:#fff;font:inherit}
+.pw-ic:hover,.pw-ic:focus-visible{background:rgba(0,0,128,.4);border-color:#cfd6ff;outline:none}
+.pw-ic .glyph{width:40px;height:40px;display:grid;place-items:center}
+.pw-ic .glyph svg{width:34px;height:34px;color:#ffe9a8;filter:drop-shadow(1px 1px 0 rgba(0,0,0,.45))}
+.pw-ic .lbl{font-size:11.5px;text-align:center;text-shadow:1px 1px 0 #000;line-height:1.2}
+
+/* windows */
+.pw-win{position:absolute;background:#c3c7cb;box-shadow:var(--out);min-width:230px;max-width:min(94vw,560px);z-index:5;display:none;flex-direction:column}
+.pw-win.focused{z-index:20}
+.pw-tb{display:flex;align-items:center;justify-content:space-between;gap:8px;background:linear-gradient(90deg,#000080,#1084d0);color:#fff;font-weight:700;font-size:12.5px;padding:3px 3px 3px 8px;cursor:grab;user-select:none;touch-action:none}
+.pw-win:not(.focused) .pw-tb{background:linear-gradient(90deg,#74777c,#a3a7ac)}
+.pw-tb .t{display:flex;align-items:center;gap:7px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;min-width:0}
+.pw-tb .t svg{width:14px;height:14px;flex-shrink:0;color:#ffe9a8}
+.pw-tb .c{display:flex;gap:2px;flex-shrink:0}
+.pw-tb .c button{width:18px;height:16px;display:grid;place-items:center;font-size:9px;font-weight:700;font-family:Tahoma;background:#c3c7cb;color:#000;border:0;box-shadow:var(--out);cursor:pointer;line-height:1;padding:0}
+.pw-tb .c button:active{box-shadow:var(--in)}
+.pw-body{padding:16px;font-size:13px;color:#0a0a0a;line-height:1.55}
+.pw-body p{margin-top:0}
+.pw-menubar{display:flex;gap:16px;background:#c3c7cb;padding:3px 9px;border-bottom:1px solid #808487;font-size:12px}
+.pw-menubar u{text-decoration:underline}
+.pw-statusbar{display:flex;align-items:center;gap:8px;margin:14px -16px -16px;padding:5px 10px;box-shadow:var(--in);font-size:11.5px;color:#0a0a0a}
+.pw-statusbar .blink{width:9px;height:9px;background:#1a8a1a;border:1px solid #064d06;flex-shrink:0}
+@media(prefers-reduced-motion:no-preference){.pw-statusbar .blink{animation:pwBlink 1.3s steps(1) infinite}}
+@keyframes pwBlink{50%{background:#5ad05a}}
+
+/* retro 3D buttons */
+.pw-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-family:Tahoma;font-size:13px;font-weight:700;color:#000;background:#c3c7cb;border:0;box-shadow:var(--out);padding:7px 16px;cursor:pointer;min-width:88px}
+.pw-btn:active{box-shadow:var(--in);transform:translate(1px,1px)}
+.pw-btn:focus-visible{outline:1px dotted #000;outline-offset:-4px}
+.pw-btn svg{width:15px;height:15px}
+.pw-btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+
+/* welcome */
+.pw-logo{font-family:'Press Start 2P',monospace;font-size:clamp(14px,2.2vw,20px);line-height:1.35;color:#000080;text-shadow:2px 2px 0 #fff,3px 3px 0 #808487}
+.pw-welcome .sub{font-family:'Press Start 2P',monospace;font-size:8px;color:#7a2; color:#0a7a0a;margin-top:10px;letter-spacing:.04em}
+.pw-welcome p{margin-top:14px;max-width:380px}
+
+/* projects: mini browser windows */
+.pw-projgrid{display:flex;gap:14px;flex-wrap:wrap}
+.pw-mini{width:182px;background:#c3c7cb;box-shadow:var(--out);flex:0 0 auto}
+.pw-mini .mtb{display:flex;align-items:center;gap:5px;background:linear-gradient(90deg,#000080,#1084d0);color:#fff;font-size:10px;font-weight:700;padding:3px 6px}
+.pw-mini .murl{display:flex;align-items:center;gap:5px;padding:3px 5px;font-size:9px}
+.pw-mini .murl .bar{flex:1;background:#fff;box-shadow:var(--in);padding:2px 5px;color:#222;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-family:'Courier Prime',monospace}
+.pw-mini .mscreen{height:98px;box-shadow:var(--in);margin:0 5px;overflow:hidden;position:relative}
+.pw-mini .cap{padding:7px 7px 9px}
+.pw-mini .cap b{font-size:12px;display:block}
+.pw-mini .cap small{font-size:11px;color:#333}
+.scr-pizza{background:radial-gradient(circle at 68% 26%,#23237a,#05052a)}
+.scr-pizza .pz{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#ffd573,#e8902a);box-shadow:0 0 0 3px #b85c12}
+.scr-pizza .pz::after{content:"";position:absolute;inset:9px;border-radius:50%;background:repeating-conic-gradient(#e8902a 0 24deg,#cf7a1c 24deg 48deg)}
+.scr-pizza .star{position:absolute;width:2px;height:2px;background:#fff}
+.scr-pizza .t{position:absolute;left:0;right:0;bottom:7px;text-align:center;font-family:'Press Start 2P';font-size:7px;color:#ffd573}
+.scr-city{background:#fff}
+.scr-city .top{position:absolute;left:0;right:0;top:0;height:17px;background:linear-gradient(90deg,#000080,#1084d0)}
+.scr-city .top::after{content:"CityNet";position:absolute;left:5px;top:4px;font-family:'Press Start 2P';font-size:6px;color:#fff}
+.scr-city i{position:absolute;left:9px;height:5px;background:#1a3fd0;border-radius:1px;display:block}
+.scr-city i:nth-child(2){top:28px;width:74%}.scr-city i:nth-child(3){top:42px;width:58%}.scr-city i:nth-child(4){top:56px;width:66%}.scr-city i:nth-child(5){top:70px;width:48%}
+.scr-extreme{background:#101014}
+.scr-extreme::before{content:"";position:absolute;inset:-30%;background:repeating-linear-gradient(122deg,#ff2d2d 0 13px,#ffd400 13px 26px,#19c3ff 26px 39px);opacity:.9;transform:skewY(-7deg)}
+.scr-extreme .x{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);font-family:'Press Start 2P';font-size:24px;color:#fff;text-shadow:3px 3px 0 #000}
+
+/* services control panel */
+.pw-cp{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;background:#fff;box-shadow:var(--in);padding:12px}
+.pw-cp-item{display:flex;align-items:center;gap:11px;background:transparent;border:1px dotted transparent;padding:7px;cursor:pointer;font:inherit;text-align:left;color:#000}
+.pw-cp-item:hover,.pw-cp-item:focus-visible{background:#000080;color:#fff;border-color:#fff;outline:none}
+.pw-cp-item:hover .g,.pw-cp-item:focus-visible .g{color:#ffe9a8}
+.pw-cp-item .g{width:30px;height:30px;flex-shrink:0;color:#000080}.pw-cp-item .g svg{width:30px;height:30px}
+.pw-cp-item b{font-size:12.5px;font-weight:600;display:block}
+.pw-cp-item small{font-size:11px;opacity:.85}
+
+/* notepad / testimonials */
+.pw-notepad{background:#fff;box-shadow:var(--in);padding:12px 13px;font-family:'Courier Prime',monospace;font-size:12.5px;white-space:pre-wrap;color:#000;line-height:1.65;max-height:300px;overflow:auto}
+
+/* mail form */
+.pw-mail label{display:block;font-size:12px;font-weight:700;margin:10px 0 4px}
+.pw-mail input,.pw-mail textarea{width:100%;font:inherit;font-size:13px;padding:6px 8px;background:#fff;border:0;box-shadow:var(--in);color:#000;font-family:'Courier Prime',monospace}
+.pw-mail .ro{background:#dfe1e4;color:#333}
+.pw-sendstatus{margin-top:12px;background:#fffbe6;box-shadow:var(--in);padding:9px 11px;font-size:12.5px;display:flex;gap:9px;align-items:center}
+.pw-sendstatus svg{width:18px;height:18px;color:#0a7a0a;flex-shrink:0}
+
+/* about */
+.pw-about{display:flex;gap:16px;align-items:flex-start}
+.pw-about .logo{width:64px;height:64px;flex-shrink:0;display:grid;place-items:center;background:linear-gradient(135deg,#000080,#1084d0);box-shadow:var(--out);font-family:'Press Start 2P';font-size:9px;color:#fff;text-align:center;line-height:1.4}
+.pw-about h3{font-size:15px;margin-bottom:6px}
+.pw-about .ver{font-family:'Courier Prime',monospace;font-size:11.5px;color:#333;margin-bottom:8px}
+.pw-about p{font-size:12.5px;line-height:1.55}
+
+/* recycle */
+.pw-recycle{list-style:none;background:#fff;box-shadow:var(--in);padding:10px;display:grid;gap:7px;font-family:'Courier Prime',monospace;font-size:12.5px}
+.pw-recycle li{display:flex;align-items:center;gap:9px;color:#000}
+.pw-recycle li svg{width:16px;height:16px;color:#5a5a5a}
+.pw-recycle li.empty{color:#555;font-style:italic}
+
+/* taskbar */
+.pw-taskbar{position:fixed;left:248px;right:0;bottom:0;z-index:30;display:flex;align-items:center;gap:6px;background:#c3c7cb;padding:3px 5px;box-shadow:inset 0 1px 0 #fff,inset 0 2px 0 #e6e8ea;border-top:1px solid #808487}
+.pw-start{display:inline-flex;align-items:center;gap:7px;font-family:Tahoma;font-weight:700;font-size:13px;color:#000;background:#c3c7cb;border:0;padding:4px 11px;box-shadow:var(--out);cursor:pointer;flex-shrink:0}
+.pw-start.on,.pw-start:active{box-shadow:var(--in)}
+.pw-start .lg{font-family:'Press Start 2P';font-size:11px;color:#000080}
+.pw-tasks{flex:1;display:flex;gap:5px;overflow:hidden;min-width:0}
+.pw-task{display:flex;align-items:center;gap:6px;flex:0 1 168px;min-width:0;font-family:Tahoma;font-size:12px;color:#000;background:#c3c7cb;border:0;box-shadow:var(--out);padding:4px 9px;cursor:pointer;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.pw-task svg{width:13px;height:13px;flex-shrink:0;color:#000080}
+.pw-task .t,.pw-task span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pw-task.active{box-shadow:var(--in);background:#bcc0c4;font-weight:700}
+.pw-tray{display:flex;align-items:center;gap:8px;box-shadow:var(--in);padding:4px 9px;flex-shrink:0}
+.pw-tray .ico{width:15px;height:15px;color:#000080}
+.pw-clock{font-size:12px;color:#000;font-variant-numeric:tabular-nums}
+/* start menu */
+.pw-startmenu{position:absolute;left:0;bottom:calc(100% + 3px);width:240px;background:#c3c7cb;box-shadow:var(--out);display:flex;z-index:40}
+.pw-startmenu[hidden]{display:none}
+.pw-sm-side{width:30px;flex-shrink:0;background:linear-gradient(#000080,#1084d0);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;color:#fff;font-family:'Press Start 2P';font-size:9px;padding:10px 0;letter-spacing:.1em}
+.pw-sm-list{flex:1;padding:4px}
+.pw-sm-list button{display:flex;align-items:center;gap:11px;width:100%;text-align:left;background:transparent;border:0;padding:8px 10px;font:inherit;font-size:13px;color:#000;cursor:pointer}
+.pw-sm-list button:hover,.pw-sm-list button:focus-visible{background:#000080;color:#fff;outline:none}
+.pw-sm-list button svg{width:20px;height:20px;color:#000080;flex-shrink:0}
+.pw-sm-list button:hover svg,.pw-sm-list button:focus-visible svg{color:#ffe9a8}
+.pw-sm-list hr{border:0;border-top:1px solid #808487;border-bottom:1px solid #fff;margin:4px 2px}
+
+/* shutdown overlay (in-page, dismissible — no real popup) */
+.pw-shutdown{position:fixed;inset:0;z-index:60;background:#000;display:grid;place-items:center;text-align:center;cursor:pointer;padding:30px}
+.pw-shutdown[hidden]{display:none}
+.pw-shutdown p{font-family:'Press Start 2P';font-size:clamp(11px,2.4vw,16px);line-height:1.8;color:#e8a33d}
+.pw-shutdown small{display:block;margin-top:22px;font-family:Tahoma;font-size:13px;color:#9a9a9a}
+
+/* mobile: stacked, usable */
+@media(max-width:760px){
+  body[data-theme="old"] .wrap{padding:0}
+  .pw-desktop{overflow:visible;min-height:0;padding:14px 12px 64px}
+  .pw-icons{position:static;flex-direction:row;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+  .pw-ic{width:74px;padding:6px 2px}
+  .pw-win{position:static!important;left:auto!important;top:auto!important;width:auto!important;max-width:none;z-index:auto!important;margin-bottom:14px}
+  .pw-cp{grid-template-columns:1fr}
+  .pw-taskbar{left:0}
+  .pw-task{flex-basis:0}
+}
 
 /* =====================================================================
    BUSINESS — corporate dashboard
@@ -1762,60 +1864,170 @@ body[data-theme="ngo"] .ng-help .foot-soc a{background:rgba(255,255,255,.18);bor
 
   <!-- ===== OLD SCHOOL ===== -->
   <section class="page" data-page="old" aria-label="Old School style demo">
-    <div class="wrap">
-      <div class="win" data-reveal>
-        <div class="win-tb"><span class="lbl"><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg>Webdesign Studio — OldSchool.exe</span><div class="win-ctrl"><button aria-label="Minimize">_</button><button aria-label="Maximize">▢</button><button aria-label="Close">✕</button></div></div>
-        <div class="win-body os-hero">
-          <div class="os-desktop">
-            <div class="os-icons">
-              <a class="os-ic" href="#old"><span class="glyph"><svg class="icon" aria-hidden="true"><use href="#i-folder"/></svg></span><span>Projects</span></a>
-              <a class="os-ic" href="#old"><span class="glyph"><svg class="icon" aria-hidden="true"><use href="#i-floppy"/></svg></span><span>Save Brief</span></a>
-              <a class="os-ic" href="#home" data-route="home"><span class="glyph"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg></span><span>All Styles</span></a>
+    <div class="pw-desktop">
+
+      <!-- DESKTOP ICONS -->
+      <div class="pw-icons">
+        <button class="pw-ic" data-open="projects"><span class="glyph"><svg class="icon" aria-hidden="true"><use href="#i-folder"/></svg></span><span class="lbl">My Projects</span></button>
+        <button class="pw-ic" data-open="services"><span class="glyph"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg></span><span class="lbl">Services</span></button>
+        <button class="pw-ic" data-open="contact"><span class="glyph"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span><span class="lbl">Contact</span></button>
+        <button class="pw-ic" data-open="about"><span class="glyph"><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg></span><span class="lbl">About PixelWorks</span></button>
+        <button class="pw-ic" data-open="testimonials"><span class="glyph"><svg class="icon" aria-hidden="true"><use href="#i-floppy"/></svg></span><span class="lbl">Testimonials.txt</span></button>
+        <button class="pw-ic" data-open="recycle"><span class="glyph"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg></span><span class="lbl">Recycle Bin</span></button>
+      </div>
+
+      <!-- WELCOME -->
+      <div class="pw-win" data-win="welcome" style="left:200px;top:22px;width:432px;display:flex">
+        <div class="pw-tb"><span class="t"><svg aria-hidden="true"><use href="#i-monitor"/></svg>Welcome to PixelWorks 98</span><div class="c"><button data-winmin aria-label="Minimize">_</button><button data-winclose aria-label="Close">✕</button></div></div>
+        <div class="pw-body pw-welcome">
+          <div class="pw-logo">PixelWorks 98</div>
+          <div class="sub">// web design since the future //</div>
+          <p>We build websites for the information superhighway.</p>
+          <div class="pw-btnrow">
+            <button class="pw-btn" data-open="projects"><svg aria-hidden="true"><use href="#i-folder"/></svg>View our work</button>
+            <button class="pw-btn" data-open="contact"><svg aria-hidden="true"><use href="#i-mail"/></svg>Send electronic mail</button>
+          </div>
+          <div class="pw-statusbar"><span class="blink"></span>Connected at 56k — blazing fast.</div>
+        </div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="pw-win" data-win="projects" style="left:250px;top:92px;width:560px">
+        <div class="pw-tb"><span class="t"><svg aria-hidden="true"><use href="#i-folder"/></svg>My Projects</span><div class="c"><button data-winmin aria-label="Minimize">_</button><button data-winclose aria-label="Close">✕</button></div></div>
+        <div class="pw-body">
+          <p style="margin-bottom:14px">Three sites freshly published to the World Wide Web:</p>
+          <div class="pw-projgrid">
+            <div class="pw-mini">
+              <div class="mtb"><svg aria-hidden="true" style="width:11px;height:11px"><use href="#i-globe"/></svg>Netscape</div>
+              <div class="murl">URL<span class="bar">http://galacticpizza.com</span></div>
+              <div class="mscreen scr-pizza"><span class="star" style="left:14px;top:12px"></span><span class="star" style="left:42px;top:26px"></span><span class="star" style="right:16px;top:14px"></span><span class="star" style="right:34px;top:32px"></span><span class="pz"></span><span class="t">GALACTIC PIZZA</span></div>
+              <div class="cap"><b>Galactic Pizza Online</b><small>Order pizza from orbit.</small></div>
             </div>
-            <div>
-              <span class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Retro · Windows 95</span>
-              <h1>Charm from a<br>different era</h1>
-              <p class="lead">Beveled buttons, blue title bars and that unmistakable 90s desktop feel. The nostalgic look for arcades, record shops, indie games and retro brands — with modern, accessible code underneath.</p>
-              <div class="cta-row"><a class="btn primary" href="#old">Send enquiry <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn ghost" href="#home" data-route="home">Other styles</a></div>
+            <div class="pw-mini">
+              <div class="mtb"><svg aria-hidden="true" style="width:11px;height:11px"><use href="#i-globe"/></svg>Netscape</div>
+              <div class="murl">URL<span class="bar">http://citynet.directory</span></div>
+              <div class="mscreen scr-city"><span class="top"></span><i></i><i></i><i></i><i></i></div>
+              <div class="cap"><b>CityNet Directory</b><small>Your guide to the web.</small></div>
+            </div>
+            <div class="pw-mini">
+              <div class="mtb"><svg aria-hidden="true" style="width:11px;height:11px"><use href="#i-globe"/></svg>Netscape</div>
+              <div class="murl">URL<span class="bar">http://extremesports.zone</span></div>
+              <div class="mscreen scr-extreme"><span class="x">X</span></div>
+              <div class="cap"><b>Extreme Sports Zone</b><small>To the max!</small></div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="win" data-reveal>
-        <div class="win-tb"><span class="lbl"><svg class="icon" aria-hidden="true"><use href="#i-folder"/></svg>My Programs</span><div class="win-ctrl"><button aria-label="Minimize">_</button><button aria-label="Maximize">▢</button><button aria-label="Close">✕</button></div></div>
-        <div class="win-body">
-          <div class="os-progs">
-            <div class="os-prog"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg><h3>Retro &amp; Gaming</h3><p>Pixel-sharp sites for indie games and arcades.</p></div>
-            <div class="os-prog"><svg class="icon" aria-hidden="true"><use href="#i-floppy"/></svg><h3>Nostalgia brands</h3><p>80s/90s aesthetics for products that lean in.</p></div>
-            <div class="os-prog"><svg class="icon" aria-hidden="true"><use href="#i-folder"/></svg><h3>Vintage &amp; heritage</h3><p>Long-standing makers with a story to tell.</p></div>
-            <div class="os-prog"><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg><h3>Fun &amp; quirky</h3><p>Personality-packed sites that stand apart.</p></div>
+      <!-- SERVICES -->
+      <div class="pw-win" data-win="services" style="left:300px;top:140px;width:440px">
+        <div class="pw-tb"><span class="t"><svg aria-hidden="true"><use href="#i-grid"/></svg>Services — Control Panel</span><div class="c"><button data-winmin aria-label="Minimize">_</button><button data-winclose aria-label="Close">✕</button></div></div>
+        <div class="pw-body">
+          <p style="margin-bottom:12px">Pick a service to add to your project:</p>
+          <div class="pw-cp">
+            <button class="pw-cp-item"><span class="g"><svg aria-hidden="true"><use href="#i-pen"/></svg></span><span><b>Web Page Design</b><small>Hand-crafted HTML</small></span></button>
+            <button class="pw-cp-item"><span class="g"><svg aria-hidden="true"><use href="#i-sparkle"/></svg></span><span><b>Animated Banners</b><small>Eye-catching GIFs</small></span></button>
+            <button class="pw-cp-item"><span class="g"><svg aria-hidden="true"><use href="#i-folder"/></svg></span><span><b>Online Catalogues</b><small>Sell on the web</small></span></button>
+            <button class="pw-cp-item"><span class="g"><svg aria-hidden="true"><use href="#i-quote"/></svg></span><span><b>Guestbooks &amp; Forms</b><small>Hear from visitors</small></span></button>
+            <button class="pw-cp-item"><span class="g"><svg aria-hidden="true"><use href="#i-globe"/></svg></span><span><b>Search Engine Submission</b><small>Get found online</small></span></button>
           </div>
+          <div class="pw-btnrow"><button class="pw-btn" data-winclose>OK</button><button class="pw-btn" data-winclose>Cancel</button></div>
         </div>
       </div>
 
-      <div class="win" data-reveal>
-        <div class="win-tb"><span class="lbl"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>New Message — Enquiry.exe</span><div class="win-ctrl"><button aria-label="Minimize">_</button><button aria-label="Maximize">▢</button><button aria-label="Close">✕</button></div></div>
-        <div class="win-body">
-          <div class="os-note"><svg class="icon" aria-hidden="true"><use href="#i-cursor"/></svg><div>Like the retro look? Fill in the form and I'll get back to you the modern way — by email, within one business day.</div></div>
-          <form class="os-fields" style="margin-top:14px" onsubmit="return false">
-            <div class="os-field"><label for="os-name">Your name</label><input id="os-name" type="text" placeholder="Jane Pixel" autocomplete="name"></div>
-            <div class="os-field"><label for="os-email">Email address</label><input id="os-email" type="email" placeholder="jane@retro.co" autocomplete="email"></div>
-            <div class="os-field"><label for="os-msg">Project details</label><textarea id="os-msg" rows="3" placeholder="I run a record shop and want a site with real 90s charm…"></textarea></div>
-            <div class="cta-row" style="margin-top:4px"><button class="btn primary" type="submit">Send enquiry</button><a class="btn ghost" href="#home" data-route="home">Cancel</a></div>
+      <!-- TESTIMONIALS -->
+      <div class="pw-win" data-win="testimonials" style="left:210px;top:64px;width:440px">
+        <div class="pw-tb"><span class="t"><svg aria-hidden="true"><use href="#i-floppy"/></svg>Testimonials.txt — Notepad</span><div class="c"><button data-winmin aria-label="Minimize">_</button><button data-winclose aria-label="Close">✕</button></div></div>
+        <div class="pw-menubar"><span><u>F</u>ile</span><span><u>E</u>dit</span><span><u>S</u>earch</span><span><u>H</u>elp</span></div>
+        <div class="pw-body" style="padding:10px">
+<pre class="pw-notepad">*** PixelWorks 98 — Guestbook ***
+
+&gt; "They built our pizza shop a website and now we
+   get orders from THREE galaxies. Out of this world!"
+        -- Tony, Galactic Pizza
+
+&gt; "Five stars! The under-construction GIF really
+   ties the whole homepage together."
+        -- Webmaster, CityNet
+
+&gt; "Loads in under 40 seconds on my 56k modem.
+   Truly we are living in the future."
+        -- A Happy Web Surfer
+
+Signed our guestbook? Tell all your friends!  :-)</pre>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="pw-win" data-win="contact" style="left:372px;top:48px;width:400px">
+        <div class="pw-tb"><span class="t"><svg aria-hidden="true"><use href="#i-mail"/></svg>Compose Mail — PixelMail</span><div class="c"><button data-winmin aria-label="Minimize">_</button><button data-winclose aria-label="Close">✕</button></div></div>
+        <div class="pw-body">
+          <form class="pw-mail" onsubmit="return false">
+            <label for="pw-to">To:</label><input id="pw-to" class="ro" value="hello@pixelworks98.net" readonly>
+            <label for="pw-from">From:</label><input id="pw-from" type="email" placeholder="you@aol.com" autocomplete="email">
+            <label for="pw-subj">Subject:</label><input id="pw-subj" type="text" placeholder="I want a rad website">
+            <label for="pw-msg">Message:</label><textarea id="pw-msg" rows="4" placeholder="Dear PixelWorks, please build me…"></textarea>
+            <div class="pw-btnrow"><button class="pw-btn" type="submit" data-send><svg aria-hidden="true"><use href="#i-mail"/></svg>Send</button><button class="pw-btn" type="button" data-winclose>Cancel</button></div>
+            <div class="pw-sendstatus" data-sendstatus hidden><svg aria-hidden="true"><use href="#i-check"/></svg>Message queued for delivery over the superhighway. (Demo only — nothing was actually sent.)</div>
           </form>
         </div>
       </div>
 
-      <div class="os-taskbar" data-reveal>
-        <button class="os-start"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg>Start</button>
-        <div class="os-tasks"><svg class="icon" aria-hidden="true" style="width:14px;height:14px;color:#000080"><use href="#i-monitor"/></svg>OldSchool.exe</div>
-        <div class="os-clock"><svg class="icon" aria-hidden="true" style="width:14px;height:14px"><use href="#i-clock"/></svg>10:24 AM</div>
+      <!-- ABOUT -->
+      <div class="pw-win" data-win="about" style="left:286px;top:158px;width:452px">
+        <div class="pw-tb"><span class="t"><svg aria-hidden="true"><use href="#i-monitor"/></svg>About PixelWorks 98</span><div class="c"><button data-winmin aria-label="Minimize">_</button><button data-winclose aria-label="Close">✕</button></div></div>
+        <div class="pw-body">
+          <div class="pw-about">
+            <div class="logo">PW<br>98</div>
+            <div>
+              <h3>PixelWorks 98</h3>
+              <div class="ver">Version 4.0 · Build 1998</div>
+              <p>A web design agency from an alternative 1998 — crafting bold themed websites and unusual interfaces for the information superhighway. Retro on the surface, modern and accessible underneath.</p>
+            </div>
+          </div>
+          <div class="pw-btnrow"><button class="pw-btn" data-winclose>OK</button></div>
+          <div style="margin-top:10px;font-size:11px;color:#444">© 1998 PixelWorks. All rights reserved. No frames were harmed.</div>
+        </div>
       </div>
 
-      <footer class="foot">
-        <div class="foot-bar"><span>© Webdesign Studio · Old School</span><span>Well made lasts long.</span></div>
-      </footer>
+      <!-- RECYCLE BIN -->
+      <div class="pw-win" data-win="recycle" style="left:228px;top:118px;width:372px">
+        <div class="pw-tb"><span class="t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg>Recycle Bin</span><div class="c"><button data-winmin aria-label="Minimize">_</button><button data-winclose aria-label="Close">✕</button></div></div>
+        <div class="pw-body">
+          <p style="margin-bottom:10px">The Recycle Bin contains files you have deleted:</p>
+          <ul class="pw-recycle">
+            <li><svg aria-hidden="true"><use href="#i-floppy"/></svg>comic-sans-logo.gif</li>
+            <li><svg aria-hidden="true"><use href="#i-floppy"/></svg>under-construction.gif</li>
+            <li><svg aria-hidden="true"><use href="#i-floppy"/></svg>blink-tag-v2.html</li>
+            <li><svg aria-hidden="true"><use href="#i-floppy"/></svg>autoplay-midi.mid</li>
+          </ul>
+          <div class="pw-btnrow"><button class="pw-btn" data-empty>Empty Recycle Bin</button><button class="pw-btn" data-winclose>Close</button></div>
+        </div>
+      </div>
+
+      <!-- TASKBAR -->
+      <div class="pw-taskbar">
+        <button class="pw-start" data-start aria-haspopup="true" aria-expanded="false"><span class="lg">⊞</span>Start</button>
+        <div class="pw-startmenu" data-startmenu hidden>
+          <div class="pw-sm-side">PixelWorks98</div>
+          <div class="pw-sm-list">
+            <button data-open="projects"><svg aria-hidden="true"><use href="#i-folder"/></svg>My Projects</button>
+            <button data-open="services"><svg aria-hidden="true"><use href="#i-grid"/></svg>Services</button>
+            <button data-open="contact"><svg aria-hidden="true"><use href="#i-mail"/></svg>Compose Mail</button>
+            <button data-open="testimonials"><svg aria-hidden="true"><use href="#i-floppy"/></svg>Testimonials</button>
+            <button data-open="about"><svg aria-hidden="true"><use href="#i-monitor"/></svg>About PixelWorks</button>
+            <button data-open="recycle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg>Recycle Bin</button>
+            <hr>
+            <button data-shutdown><svg aria-hidden="true"><use href="#i-clock"/></svg>Shut Down…</button>
+          </div>
+        </div>
+        <div class="pw-tasks" data-tasks></div>
+        <div class="pw-tray"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" stroke="none"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8a5 5 0 0 1 0 8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span class="pw-clock" data-clock>10:24 AM</span></div>
+      </div>
+
+      <!-- SHUTDOWN OVERLAY (in-page, dismissible) -->
+      <div class="pw-shutdown" data-shutdownscreen hidden><div><p>It's now safe to turn off<br>your computer.</p><small>(click anywhere to return)</small></div></div>
+
     </div>
   </section>
 
@@ -2255,6 +2467,111 @@ body[data-theme="ngo"] .ng-help .foot-soc a{background:rgba(255,255,255,.18);bor
   new MutationObserver(function(){ isModern() ? startFlow() : stopFlow(); })
     .observe(document.body, {attributes:true, attributeFilter:['data-theme']});
   if(isModern()) startFlow();
+})();
+</script>
+<script>
+/* PIXELWORKS 98 (Old School page) — windowing desktop */
+(function(){
+  var old = document.querySelector('.page[data-page="old"]');
+  if(!old) return;
+  var desktop = old.querySelector('.pw-desktop');
+  var taskHost = old.querySelector('[data-tasks]');
+  var isMobile = function(){ return window.matchMedia('(max-width:760px)').matches; };
+
+  var wins = {};
+  old.querySelectorAll('.pw-win').forEach(function(w){
+    wins[w.dataset.win] = { el:w, state: (w.dataset.win === 'welcome' ? 'open' : 'closed') };
+  });
+  var ztop = 20;
+
+  function titleHTML(w){ var t = w.el.querySelector('.pw-tb .t'); return t ? t.innerHTML : w.el.dataset.win; }
+  function renderTasks(){
+    if(!taskHost) return;
+    taskHost.innerHTML = '';
+    Object.keys(wins).forEach(function(id){
+      var w = wins[id]; if(w.state === 'closed') return;
+      var b = document.createElement('button');
+      b.className = 'pw-task' + (w.state === 'open' ? ' active' : '');
+      b.type = 'button';
+      b.innerHTML = titleHTML(w);
+      b.addEventListener('click', function(){ w.state === 'open' ? minWin(id) : openWin(id); });
+      taskHost.appendChild(b);
+    });
+  }
+  function focusWin(id){
+    old.querySelectorAll('.pw-win').forEach(function(x){ x.classList.remove('focused'); });
+    var w = wins[id]; if(!w) return; ztop++; w.el.style.zIndex = ztop; w.el.classList.add('focused');
+    renderTasks();
+  }
+  function openWin(id){
+    var w = wins[id]; if(!w) return;
+    w.state = 'open'; w.el.style.display = 'flex'; focusWin(id);
+    if(isMobile()) w.el.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }
+  function minWin(id){ var w = wins[id]; if(!w) return; w.state = 'min'; w.el.style.display = 'none'; w.el.classList.remove('focused'); renderTasks(); }
+  function closeWin(id){ var w = wins[id]; if(!w) return; w.state = 'closed'; w.el.style.display = 'none'; w.el.classList.remove('focused'); renderTasks(); }
+
+  // init
+  Object.keys(wins).forEach(function(id){ wins[id].el.style.display = wins[id].state === 'open' ? 'flex' : 'none'; });
+  if(wins.welcome){ wins.welcome.el.classList.add('focused'); }
+  renderTasks();
+
+  // per-window controls, focus, drag
+  old.querySelectorAll('.pw-win').forEach(function(w){
+    var id = w.dataset.win;
+    w.addEventListener('mousedown', function(){ focusWin(id); }, true);
+    w.querySelectorAll('[data-winmin]').forEach(function(b){ b.addEventListener('click', function(e){ e.stopPropagation(); minWin(id); }); });
+    w.querySelectorAll('[data-winclose]').forEach(function(b){ b.addEventListener('click', function(e){ e.stopPropagation(); closeWin(id); }); });
+    var tb = w.querySelector('.pw-tb');
+    if(tb){
+      tb.addEventListener('mousedown', function(e){
+        if(e.target.closest('button') || isMobile()) return;
+        var sx = e.clientX, sy = e.clientY, r = w.getBoundingClientRect(), dr = desktop.getBoundingClientRect();
+        var ox = r.left - dr.left, oy = r.top - dr.top;
+        function move(ev){
+          var nx = Math.max(0, Math.min(ox + (ev.clientX - sx), desktop.clientWidth - 64));
+          var ny = Math.max(0, Math.min(oy + (ev.clientY - sy), desktop.clientHeight - 40));
+          w.style.left = nx + 'px'; w.style.top = ny + 'px';
+        }
+        function up(){ document.removeEventListener('mousemove', move); document.removeEventListener('mouseup', up); tb.style.cursor = 'grab'; }
+        tb.style.cursor = 'grabbing'; document.addEventListener('mousemove', move); document.addEventListener('mouseup', up); e.preventDefault();
+      });
+    }
+  });
+
+  // openers (icons, start menu, in-window buttons)
+  old.querySelectorAll('[data-open]').forEach(function(b){ b.addEventListener('click', function(){ openWin(b.getAttribute('data-open')); closeStart(); }); });
+
+  // start menu
+  var startBtn = old.querySelector('[data-start]'), startMenu = old.querySelector('[data-startmenu]');
+  function openStart(){ if(startMenu) startMenu.hidden = false; if(startBtn){ startBtn.setAttribute('aria-expanded','true'); startBtn.classList.add('on'); } }
+  function closeStart(){ if(startMenu) startMenu.hidden = true; if(startBtn){ startBtn.setAttribute('aria-expanded','false'); startBtn.classList.remove('on'); } }
+  if(startBtn) startBtn.addEventListener('click', function(e){ e.stopPropagation(); startMenu.hidden ? openStart() : closeStart(); });
+  document.addEventListener('click', function(e){ if(startMenu && !startMenu.hidden && !e.target.closest('[data-startmenu]') && !e.target.closest('[data-start]')) closeStart(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeStart(); });
+
+  // shutdown overlay
+  var shutItem = old.querySelector('[data-shutdown]'), shutScreen = old.querySelector('[data-shutdownscreen]');
+  if(shutItem) shutItem.addEventListener('click', function(){ closeStart(); if(shutScreen) shutScreen.hidden = false; });
+  if(shutScreen) shutScreen.addEventListener('click', function(){ shutScreen.hidden = true; });
+
+  // contact send (demo only)
+  var sendBtn = old.querySelector('[data-send]'), sendStatus = old.querySelector('[data-sendstatus]');
+  if(sendBtn) sendBtn.addEventListener('click', function(e){ e.preventDefault(); if(sendStatus) sendStatus.hidden = false; });
+
+  // empty recycle bin
+  var emptyBtn = old.querySelector('[data-empty]');
+  if(emptyBtn) emptyBtn.addEventListener('click', function(){ var l = old.querySelector('.pw-recycle'); if(l) l.innerHTML = '<li class="empty">The Recycle Bin is empty.</li>'; });
+
+  // clock
+  var clock = old.querySelector('[data-clock]');
+  function tick(){
+    if(!clock) return;
+    var d = new Date(), h = d.getHours(), m = d.getMinutes(), ap = h < 12 ? 'AM' : 'PM';
+    h = h % 12; if(h === 0) h = 12;
+    clock.textContent = h + ':' + (m < 10 ? '0' : '') + m + ' ' + ap;
+  }
+  tick(); setInterval(tick, 20000);
 })();
 </script>
 </body>
