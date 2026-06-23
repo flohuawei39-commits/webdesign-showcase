@@ -1291,6 +1291,27 @@ body[data-theme="ngo"]{background:
 .ng-news input{flex:1;min-width:0;background:#fff;border:0;border-radius:99px;padding:13px 18px;font:inherit;font-size:14px;color:#21331d}
 .ng-news button{background:#16331c;color:#fff;border-radius:99px;padding:13px 22px;font-weight:800;white-space:nowrap}
 body[data-theme="ngo"] .ng-help .foot-soc a{background:rgba(255,255,255,.18);border:0;color:#fff}
+/* top donor */
+.baro-top{display:flex;align-items:center;gap:13px;margin-top:16px;padding:13px 15px;background:rgba(47,158,88,.08);border:1px dashed var(--accent);border-radius:16px;font-size:14.5px}
+.baro-top .medal{font-size:22px;line-height:1}
+.baro-top b{color:var(--fg)}.baro-top small{color:var(--muted)}
+/* where money goes */
+.ng-alloc{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;margin-top:18px;background:var(--card);border:1px solid var(--card-border);border-radius:24px;padding:34px}
+.ng-alloc h3{font-size:clamp(20px,2.6vw,28px);font-weight:900}
+.ng-alloc p{color:var(--muted);font-size:15px;line-height:1.6;margin-top:10px}
+.ng-alloc .note{display:flex;align-items:center;gap:9px;margin-top:18px;font-size:13.5px;color:var(--accent);font-weight:800}
+.ng-alloc .note .icon{width:18px;height:18px;flex-shrink:0}
+.ng-bars{display:grid;gap:16px}
+.ng-arow b{display:flex;justify-content:space-between;font-size:14px;font-weight:800;margin-bottom:7px}
+.ng-arow .bar{height:12px;border-radius:99px;background:#e7efdc;overflow:hidden}
+.ng-arow .bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#2f9e58,#82c54a)}
+/* final cta */
+.ng-cta2{margin-top:40px;text-align:center;padding:60px 30px;border-radius:26px;color:#fff;position:relative;overflow:hidden;background:linear-gradient(120deg,rgba(22,51,28,.74),rgba(22,51,28,.45)),url('images/forest.webp') center/cover,linear-gradient(120deg,#2f9e58,#82c54a)}
+.ng-cta2 h2{font-size:clamp(28px,4vw,46px);font-weight:900;max-width:640px;margin:0 auto;line-height:1.1}
+.ng-cta2 p{max-width:480px;margin:14px auto 0;opacity:.94;line-height:1.6}
+.ng-cta2 .cta-row{display:flex;justify-content:center;margin-top:26px}
+.ng-cta2 .btn.primary{background:#fff;color:#2f8a4e}
+@media(max-width:760px){.ng-alloc{grid-template-columns:1fr;gap:22px}}
 
 /* =====================================================================
    RESPONSIVE
@@ -2503,25 +2524,26 @@ Signed our guestbook? Tell all your friends!  :-)</pre>
   <section class="page" data-page="ngo" aria-label="NGO style demo">
     <div class="wrap">
       <div class="ng-hero" data-reveal>
-        <span class="eyebrow" style="color:#eafff0"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>NGO · Nature &amp; Wildlife</span>
-        <h1>For a cause <span class="hl">that matters</span></h1>
-        <p class="lead">Warm, welcoming and rooted in nature. The presence for animal welfare, conservation groups and foundations — one that moves people and invites everyone to take part.</p>
+        <span class="eyebrow" style="color:#eafff0"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>Wildhaven · Wildlife &amp; Wild Places</span>
+        <h1>Protect what can't <span class="hl">speak for itself.</span></h1>
+        <p class="lead">Wildhaven rescues animals, restores habitats and helps communities live alongside nature. Every gift goes straight into the field — and you can see exactly where.</p>
         <div class="ng-donate" role="group" aria-label="Choose a donation amount">
           <button type="button">€5</button><button type="button" class="on">€15</button><button type="button">€50</button><button type="button" class="give">Donate <svg class="icon" aria-hidden="true" style="width:16px;height:16px"><use href="#i-heart"/></svg></button>
         </div>
       </div>
 
       <div class="barometer" data-reveal>
-        <div class="baro-head"><span style="display:flex;align-items:center;gap:9px"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>Donation goal — protect forests &amp; wildlife</span><b>€7,250 / €10,000</b></div>
+        <div class="baro-head"><span style="display:flex;align-items:center;gap:9px"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>This month's goal — protect forests &amp; wildlife</span><b>€7,250 / €10,000</b></div>
         <div class="baro-track"><div class="baro-fill" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" aria-label="72 percent of goal raised">72%</div></div>
         <div class="baro-meta"><span>Raised so far</span><span>Goal</span></div>
+        <div class="baro-top"><span class="medal">🏅</span><div>Top donor this month: <b>Florian Kuratle</b> <small>from Fiverr</small> · <b>€500</b></div></div>
       </div>
 
       <div class="ng-impact">
-        <div class="ng-imp" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg><b>2,400</b><span>Animals rescued</span></div>
-        <div class="ng-imp" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg><b>180ha</b><span>Forest protected</span></div>
-        <div class="ng-imp" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><b>5,600</b><span>Active supporters</span></div>
-        <div class="ng-imp" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg><b>34</b><span>Partner projects</span></div>
+        <div class="ng-imp" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg><b data-count="2400">2,400</b><span>Animals rescued</span></div>
+        <div class="ng-imp" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg><b data-count="180" data-suffix="ha">180ha</b><span>Forest protected</span></div>
+        <div class="ng-imp" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><b data-count="5600">5,600</b><span>Active supporters</span></div>
+        <div class="ng-imp" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg><b data-count="34">34</b><span>Partner projects</span></div>
       </div>
 
       <h2 style="font-size:clamp(22px,3vw,32px);font-weight:900;margin:42px 0 16px" data-reveal>Our programmes</h2>
@@ -2540,6 +2562,20 @@ Signed our guestbook? Tell all your friends!  :-)</pre>
         </article>
       </div>
 
+      <h2 style="font-size:clamp(22px,3vw,32px);font-weight:900;margin:48px 0 16px" data-reveal>Where your donation goes</h2>
+      <div class="ng-alloc" data-reveal>
+        <div>
+          <h3>82% straight into the field.</h3>
+          <p>We keep overheads low and report every euro. Independent auditors check our books each year, so you always know your gift is working.</p>
+          <div class="note"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Registered charity · independently audited</div>
+        </div>
+        <div class="ng-bars">
+          <div class="ng-arow"><b><span>Programmes &amp; field work</span><span>82%</span></b><div class="bar"><i style="width:82%"></i></div></div>
+          <div class="ng-arow"><b><span>Education &amp; outreach</span><span>11%</span></b><div class="bar"><i style="width:11%"></i></div></div>
+          <div class="ng-arow"><b><span>Administration</span><span>7%</span></b><div class="bar"><i style="width:7%"></i></div></div>
+        </div>
+      </div>
+
       <div class="ng-story" data-reveal>
         <div class="pic"><svg viewBox="0 0 300 320" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Volunteer in the forest"><defs><linearGradient id="ng4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f6b3f"/><stop offset="1" stop-color="#9ec98a"/></linearGradient></defs><rect width="300" height="320" fill="url(#ng4)"/><circle cx="150" cy="120" r="48" fill="#fff" opacity=".25"/><path d="M0 240 Q90 200 150 230 T300 220 V320 H0 Z" fill="#1f4d2c" opacity=".6"/></svg></div>
         <div class="txt"><svg class="icon" aria-hidden="true"><use href="#i-quote"/></svg><p>"Every donation goes straight into the field. Our new site made that transparent — and giving doubled."</p><cite><b>Lena Brandt</b> — Volunteer Coordinator</cite></div>
@@ -2555,6 +2591,12 @@ Signed our guestbook? Tell all your friends!  :-)</pre>
           <input id="ng-mail" type="email" placeholder="you@email.com" autocomplete="email">
           <button type="submit">Subscribe</button>
         </form>
+      </div>
+
+      <div class="ng-cta2" data-reveal>
+        <h2>Every gift protects a wild future.</h2>
+        <p>Join thousands of supporters keeping our forests standing and our wildlife safe.</p>
+        <div class="cta-row"><a class="btn primary" href="#ngo">Donate now <svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></a></div>
       </div>
 
       <footer class="foot">
@@ -2965,6 +3007,36 @@ Signed our guestbook? Tell all your friends!  :-)</pre>
   function activate(){ if(!counted){ counted = true; countUp(); } }
   new MutationObserver(function(){ if(isSport()) activate(); }).observe(document.body, {attributes:true, attributeFilter:['data-theme']});
   if(isSport()) activate();
+})();
+</script>
+<script>
+/* WILDHAVEN (NGO page) — animated impact numbers */
+(function(){
+  var ng = document.querySelector('.page[data-page="ngo"]');
+  if(!ng) return;
+  var rm = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function isNgo(){ return document.body.getAttribute('data-theme') === 'ngo'; }
+  function fmt(n){ return Math.round(n).toLocaleString('en-US'); }
+  var counted = false;
+  function countUp(){
+    ng.querySelectorAll('[data-count]').forEach(function(el){
+      var target = parseFloat(el.getAttribute('data-count'));
+      var suf = el.getAttribute('data-suffix') || '';
+      if(rm.matches || document.hidden){ el.textContent = fmt(target) + suf; return; }
+      var start = null, dur = 1200;
+      function step(ts){
+        if(!start) start = ts;
+        var p = Math.min(1, (ts - start) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = fmt(target * eased) + suf;
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  function activate(){ if(!counted){ counted = true; countUp(); } }
+  new MutationObserver(function(){ if(isNgo()) activate(); }).observe(document.body, {attributes:true, attributeFilter:['data-theme']});
+  if(isNgo()) activate();
 })();
 </script>
 </body>
