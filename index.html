@@ -955,55 +955,109 @@ body[data-theme="old"] .wrap{max-width:none;padding:0}
 /* =====================================================================
    BUSINESS — corporate dashboard
    ===================================================================== */
-body[data-theme="business"] .bz-hero{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;padding:56px 0 26px}
-body[data-theme="business"] .bz-hero h1{font-family:'Oswald';font-size:clamp(34px,4.6vw,54px);line-height:1.05;text-transform:uppercase;letter-spacing:-.01em}
-body[data-theme="business"] .bz-hero h1 .hl{color:var(--accent)}
-body[data-theme="business"] .bz-lead{color:var(--muted);font-size:17px;line-height:1.65;margin-top:16px;max-width:540px}
-.bz-trust{background:var(--card);border:1px solid var(--card-border);border-top:4px solid var(--accent);border-radius:12px;padding:24px;box-shadow:var(--shadow)}
-.bz-trust h4{font-family:'Oswald';text-transform:uppercase;letter-spacing:.04em;font-size:14px;color:var(--muted);margin-bottom:14px}
-.bz-trust .row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--card-border);font-size:14px}
-.bz-trust .row:last-child{border:0}.bz-trust .row .icon{color:var(--accent);width:22px;height:22px}
-.bz-trust .row b{margin-left:auto;font-family:'Oswald';font-size:18px}
-.bz-shot{margin-top:8px;border-radius:14px;overflow:hidden;border:1px solid var(--card-border);box-shadow:var(--shadow);height:clamp(200px,30vw,340px)}
-.bz-shot img{width:100%;height:100%;object-fit:cover;display:block}
+/* BUSINESS — Meridian Partners (strategy & advisory) */
+body[data-theme="business"] .wrap{max-width:1140px}
+body[data-theme="business"] .btn.primary{background:var(--accent);color:#fff;border-radius:6px}
+body[data-theme="business"] .btn.primary:hover{background:#0c4596}
+body[data-theme="business"] .btn.ghost{border-color:var(--card-border);color:var(--fg);border-radius:6px}
+body[data-theme="business"] .btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
 
-.bz-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
-.bz-kpi{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:4px}
-.bz-kpi .icon{width:22px;height:22px;color:var(--accent)}
-.bz-kpi b{font-family:'Oswald';font-size:32px;color:var(--fg);line-height:1}
-.bz-kpi span{font-size:12.5px;color:var(--muted)}
-.bz-kpi em{font-style:normal;font-size:12px;color:var(--accent);font-weight:600}
+/* hero */
+.mp-hero{display:grid;grid-template-columns:1.32fr .68fr;gap:46px;align-items:center;padding:56px 0 26px}
+.mp-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Oswald';font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.mp-eyebrow::before{content:"";width:26px;height:2px;background:var(--accent)}
+.mp-hero h1{font-family:'Oswald';font-weight:600;font-size:clamp(38px,5vw,62px);line-height:1.02;letter-spacing:0;text-transform:uppercase;margin-top:18px}
+.mp-hero h1 .hl{color:var(--accent)}
+.mp-lead{color:var(--muted);font-size:18px;line-height:1.65;margin-top:20px;max-width:540px}
+.mp-cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.mp-cred{background:var(--card);border:1px solid var(--card-border);border-top:4px solid var(--accent);border-radius:12px;padding:26px;box-shadow:var(--shadow)}
+.mp-cred h4{font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:13px;color:var(--muted);margin-bottom:14px}
+.mp-cred .row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--card-border);font-size:14.5px}
+.mp-cred .row:last-child{border:0;padding-bottom:0}
+.mp-cred .row .icon{width:20px;height:20px;color:var(--accent);flex-shrink:0}
 
-.bz-dash{display:grid;grid-template-columns:1.4fr 1fr;gap:18px;margin-top:18px}
-.bz-panel{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:20px}
-.bz-panel .ph{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
-.bz-panel .ph h3{font-family:'Oswald';text-transform:uppercase;letter-spacing:.03em;font-size:16px}
-.bz-panel .ph .icon{color:var(--accent);width:20px;height:20px}
-.bz-chart-cap{font-size:12.5px;color:var(--accent);font-weight:700;margin-top:10px;display:flex;align-items:center;gap:7px}
-.bz-report{display:flex;flex-direction:column;gap:12px}
-.bz-report .r{display:flex;align-items:center;gap:12px}
-.bz-report .r .icon{width:20px;height:20px;color:var(--accent)}
-.bz-report .r .t{flex:1;min-width:0}
-.bz-report .r b{display:block;font-size:13.5px}
-.bz-report .r small{color:var(--muted);font-size:12px}
-.bz-bar{height:7px;border-radius:99px;background:var(--bg);overflow:hidden;margin-top:5px}
-.bz-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:99px}
+/* logo strip */
+.mp-logos{margin-top:34px;padding:22px 0;border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.mp-logos .lab{font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:var(--muted);white-space:nowrap}
+.mp-logos .marks{display:flex;flex:1;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:center}
+.mp-logos .lg{font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:17px;color:#8294ad;font-weight:600}
 
-.bz-serv{display:grid;grid-template-columns:repeat(2,1fr);gap:0 36px;margin-top:18px}
-.bz-srow{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--card-border)}
-.bz-srow .no{font-family:'Oswald';font-size:22px;color:var(--accent);min-width:34px}
-.bz-srow h3{font-family:'Oswald';text-transform:uppercase;font-size:16px;letter-spacing:.02em;margin-bottom:5px}
-.bz-srow p{color:var(--muted);font-size:13.5px;line-height:1.55}
+/* section heading */
+.mp-h{margin:78px 0 30px;max-width:700px}
+.mp-h .k{font-family:'Oswald';font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;display:flex;align-items:center;gap:10px}
+.mp-h .k::before{content:"";width:26px;height:2px;background:var(--accent)}
+.mp-h h2{font-family:'Oswald';text-transform:uppercase;font-weight:600;font-size:clamp(26px,3.4vw,40px);letter-spacing:0;line-height:1.05;margin-top:12px}
+.mp-h p{color:var(--muted);font-size:16px;line-height:1.6;margin-top:13px}
 
-.bz-logos{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:24px;padding:20px 24px;background:var(--card);border:1px solid var(--card-border);border-radius:12px}
-.bz-logos .lg{flex:1 1 120px;text-align:center;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-size:15px;opacity:.8}
-.bz-quote{margin-top:18px;background:linear-gradient(120deg,#0a2342,#143b6e);color:#fff;border-radius:12px;padding:32px}
-.bz-quote p{font-size:19px;line-height:1.55;font-weight:300;max-width:760px}
-.bz-quote cite{display:block;margin-top:16px;font-style:normal;font-size:14px;opacity:.85}
-.bz-quote cite b{font-family:'Oswald'}
-.bz-cta{margin-top:18px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;background:var(--card);border:1px solid var(--card-border);border-left:4px solid var(--accent);border-radius:12px;padding:28px 30px}
-.bz-cta h2{font-family:'Oswald';text-transform:uppercase;font-size:clamp(20px,2.6vw,28px)}
-.bz-cta p{color:var(--muted);font-size:14px;margin-top:5px}
+/* practices */
+.mp-practices{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;border-top:1px solid var(--card-border)}
+.mp-prac{display:flex;gap:18px;padding:24px 0;border-bottom:1px solid var(--card-border)}
+.mp-prac .no{font-family:'Oswald';font-size:20px;color:var(--accent);min-width:30px;padding-top:1px}
+.mp-prac h3{font-family:'Oswald';text-transform:uppercase;font-size:17px;letter-spacing:.02em}
+.mp-prac p{color:var(--muted);font-size:14px;line-height:1.6;margin-top:6px}
+
+/* approach */
+.mp-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.mp-step{border-top:3px solid var(--accent);padding-top:18px}
+.mp-step .n{font-family:'Oswald';font-size:13px;color:var(--accent);letter-spacing:.1em}
+.mp-step h3{font-family:'Oswald';text-transform:uppercase;font-size:17px;margin:6px 0 8px}
+.mp-step p{color:var(--muted);font-size:13.5px;line-height:1.55}
+
+/* case study */
+.mp-case{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--card-border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);background:var(--card)}
+.mp-case .img{background:url('images/business.webp') center/cover,linear-gradient(135deg,#0a2342,#1b3a6b);min-height:340px}
+.mp-case .body{padding:40px 38px;display:flex;flex-direction:column;justify-content:center}
+.mp-case .tag{font-family:'Oswald';font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.mp-case h3{font-family:'Oswald';text-transform:uppercase;font-size:clamp(20px,2.4vw,28px);line-height:1.08;margin:11px 0 13px}
+.mp-case p{color:var(--muted);font-size:15px;line-height:1.65}
+.mp-case .results{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px;border-top:1px solid var(--card-border);padding-top:24px}
+.mp-case .results b{font-family:'Oswald';font-size:30px;color:var(--accent);line-height:1}
+.mp-case .results span{display:block;font-size:12px;color:var(--muted);margin-top:5px;line-height:1.4}
+
+/* stats band */
+.mp-stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--card-border);border-radius:14px;overflow:hidden;background:var(--card)}
+.mp-stat{padding:32px 24px;text-align:center}
+.mp-stat+.mp-stat{border-left:1px solid var(--card-border)}
+.mp-stat b{font-family:'Oswald';font-size:clamp(30px,3.6vw,46px);color:var(--fg);line-height:1;display:block}
+.mp-stat span{font-size:13px;color:var(--muted);margin-top:9px;display:block}
+
+/* quote */
+.mp-quote{margin-top:18px;background:linear-gradient(120deg,#0a2342,#143b6e);color:#fff;border-radius:14px;padding:46px 42px}
+.mp-quote .qi{width:38px;height:38px;color:#7fb0ec;opacity:.65}
+.mp-quote p{font-size:clamp(19px,2.3vw,26px);line-height:1.5;font-weight:300;max-width:820px;margin-top:14px}
+.mp-quote cite{display:flex;align-items:center;gap:13px;margin-top:26px;font-style:normal}
+.mp-quote cite .av{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#2f80d6,#0f55b8);display:grid;place-items:center;font-family:'Oswald';font-weight:600;color:#fff;flex-shrink:0}
+.mp-quote cite b{font-family:'Oswald';font-size:15px;display:block}
+.mp-quote cite small{opacity:.82;font-size:13px}
+
+/* leadership */
+.mp-team{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.mp-person{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:24px;text-align:center}
+.mp-person .av{width:64px;height:64px;border-radius:50%;margin:0 auto 14px;background:linear-gradient(135deg,#0a2342,#2f80d6);display:grid;place-items:center;font-family:'Oswald';font-size:20px;color:#fff}
+.mp-person b{font-family:'Oswald';text-transform:uppercase;font-size:15px;letter-spacing:.02em}
+.mp-person span{display:block;font-size:12.5px;color:var(--muted);margin-top:4px}
+
+/* cta */
+.mp-cta{margin-top:74px;background:linear-gradient(120deg,#0a2342,#143b6e);color:#fff;border-radius:16px;padding:clamp(36px,5vw,56px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:26px}
+.mp-cta h2{font-family:'Oswald';text-transform:uppercase;font-size:clamp(24px,3.2vw,38px);line-height:1.04;max-width:600px}
+.mp-cta p{opacity:.85;margin-top:10px;font-size:15px;max-width:480px}
+.mp-cta .btn.primary{background:#fff;color:#0a2342}
+.mp-cta .btn.primary:hover{background:#e8eef6}
+
+@media(max-width:900px){
+  .mp-hero{grid-template-columns:1fr;gap:32px}
+  .mp-practices{grid-template-columns:1fr}
+  .mp-steps{grid-template-columns:repeat(2,1fr)}
+  .mp-case{grid-template-columns:1fr}.mp-case .img{min-height:200px;order:-1}
+  .mp-stats{grid-template-columns:repeat(2,1fr)}.mp-stat:nth-child(3){border-left:0}.mp-stat:nth-child(n+3){border-top:1px solid var(--card-border)}
+  .mp-team{grid-template-columns:repeat(2,1fr)}
+  .mp-logos .marks{justify-content:flex-start;gap:24px}
+}
+@media(max-width:560px){
+  .mp-steps,.mp-stats,.mp-team{grid-template-columns:1fr}
+  .mp-stat+.mp-stat{border-left:0;border-top:1px solid var(--card-border)}
+  .mp-case .results{grid-template-columns:1fr 1fr}
+}
 
 /* =====================================================================
    SPORT — diagonal / dynamic
@@ -2034,87 +2088,116 @@ Signed our guestbook? Tell all your friends!  :-)</pre>
   <!-- ===== BUSINESS ===== -->
   <section class="page" data-page="business" aria-label="Business style demo">
     <div class="wrap">
-      <div class="bz-hero">
+      <!-- HERO -->
+      <div class="mp-hero">
         <div data-reveal>
-          <span class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg>Business · Corporate</span>
-          <h1>Professional. Clear. <span class="hl">Trusted.</span></h1>
-          <p class="bz-lead">Structure, credibility and a message that lands in seconds. The presence for law firms, consultancies, SMEs and B2B providers who need to look as competent as they are.</p>
-          <div class="cta-row"><a class="btn primary" href="#business">Request a consultation <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn ghost" href="#home" data-route="home">All styles</a></div>
+          <span class="mp-eyebrow">Meridian Partners — Strategy &amp; Advisory</span>
+          <h1>Clarity in your most <span class="hl">important decisions.</span></h1>
+          <p class="mp-lead">Meridian Partners works alongside leadership teams to set strategy, sharpen operations and grow with confidence — across finance, industry and technology.</p>
+          <div class="mp-cta-row">
+            <a class="btn primary" href="#business">Request a consultation <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn ghost" href="#business">Arrange a call</a>
+          </div>
         </div>
-        <div class="bz-trust" data-reveal>
-          <h4>Why clients choose us</h4>
-          <div class="row"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>GDPR-compliant setup <b>100%</b></div>
-          <div class="row"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Projects delivered <b>120+</b></div>
-          <div class="row"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Avg. client rating <b>4.9</b></div>
-          <div class="row"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Years in business <b>9</b></div>
+        <div class="mp-cred" data-reveal>
+          <h4>Why Meridian</h4>
+          <div class="row"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Senior partners on every team</div>
+          <div class="row"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Deep sector expertise</div>
+          <div class="row"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Outcomes we measure</div>
+          <div class="row"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Independent &amp; confidential</div>
         </div>
       </div>
 
-      <figure class="bz-shot" data-reveal>
-        <img src="images/business.webp" alt="A web-design dashboard reviewed on a tablet during a client meeting" loading="lazy" width="1280" height="720">
-      </figure>
-
-      <div class="bz-kpis">
-        <div class="bz-kpi" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-devices"/></svg><b>100%</b><span>Responsive</span><em>every device</em></div>
-        <div class="bz-kpi" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><b>GDPR</b><span>Compliant</span><em>EU-hosted option</em></div>
-        <div class="bz-kpi" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg><b>SEO</b><span>From day one</span><em>built-in</em></div>
-        <div class="bz-kpi" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><b>24/7</b><span>Online presence</span><em>monitored</em></div>
+      <!-- LOGOS -->
+      <div class="mp-logos" data-reveal>
+        <span class="lab">Trusted by leaders across<br>finance, industry &amp; technology</span>
+        <div class="marks">
+          <span class="lg">Nordbank</span><span class="lg">Helvetia Group</span><span class="lg">Avista</span><span class="lg">Kraftwerk</span><span class="lg">Lumira</span><span class="lg">Brandt &amp; Söhne</span>
+        </div>
       </div>
 
-      <div class="bz-dash">
-        <div class="bz-panel" data-reveal>
-          <div class="ph"><h3>Performance overview</h3><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></div>
-          <svg viewBox="0 0 320 170" width="100%" role="img" aria-label="Upward performance chart, January to June">
-            <g stroke="var(--card-border)" stroke-width="1"><line x1="34" y1="22" x2="312" y2="22"/><line x1="34" y1="62" x2="312" y2="62"/><line x1="34" y1="102" x2="312" y2="102"/><line x1="34" y1="140" x2="312" y2="140"/></g>
-            <line x1="34" y1="20" x2="34" y2="140" stroke="#9fb0c8"/><line x1="34" y1="140" x2="312" y2="140" stroke="#9fb0c8"/>
-            <path d="M40 128 L94 116 L150 96 L206 70 L262 46 L302 26 L302 140 L40 140 Z" fill="rgba(15,85,184,.14)"/>
-            <polyline points="40,128 94,116 150,96 206,70 262,46 302,26" fill="none" stroke="#0f55b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <g fill="#0f55b8"><circle cx="40" cy="128" r="3.5"/><circle cx="94" cy="116" r="3.5"/><circle cx="150" cy="96" r="3.5"/><circle cx="206" cy="70" r="3.5"/><circle cx="262" cy="46" r="3.5"/><circle cx="302" cy="26" r="4.5" fill="#2f80d6"/></g>
-            <g fill="#56687f" font-size="9" font-family="Inter,sans-serif" text-anchor="middle"><text x="40" y="153">Jan</text><text x="94" y="153">Feb</text><text x="150" y="153">Mar</text><text x="206" y="153">Apr</text><text x="262" y="153">May</text><text x="302" y="153">Jun</text></g>
-          </svg>
-          <div class="bz-chart-cap"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg>Traffic &amp; conversions trending up, month over month.</div>
-        </div>
-        <div class="bz-panel" data-reveal>
-          <div class="ph"><h3>Project health</h3><svg class="icon" aria-hidden="true"><use href="#i-gauge"/></svg></div>
-          <div class="bz-report">
-            <div class="r"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg><div class="t"><b>Conversion rate</b><div class="bz-bar"><i style="width:78%"></i></div></div></div>
-            <div class="r"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg><div class="t"><b>Page speed</b><div class="bz-bar"><i style="width:92%"></i></div></div></div>
-            <div class="r"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg><div class="t"><b>Organic reach</b><div class="bz-bar"><i style="width:64%"></i></div></div></div>
-            <div class="r"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><div class="t"><b>Accessibility</b><div class="bz-bar"><i style="width:100%"></i></div></div></div>
+      <!-- PRACTICES -->
+      <div class="mp-h" data-reveal>
+        <span class="k">What we do</span>
+        <h2>Six practices, one standard of rigour.</h2>
+        <p>We bring senior, sector-specialist teams to the decisions that move the needle.</p>
+      </div>
+      <div class="mp-practices">
+        <div class="mp-prac" data-reveal><span class="no">01</span><div><h3>Corporate Strategy</h3><p>Where to play and how to win — a clear, defensible direction for the next five years.</p></div></div>
+        <div class="mp-prac" data-reveal><span class="no">02</span><div><h3>Operations &amp; Performance</h3><p>Cost, quality and speed: lasting improvement across your value chain.</p></div></div>
+        <div class="mp-prac" data-reveal><span class="no">03</span><div><h3>Mergers &amp; Acquisitions</h3><p>Diligence, valuation and integration that protect and create deal value.</p></div></div>
+        <div class="mp-prac" data-reveal><span class="no">04</span><div><h3>Digital Transformation</h3><p>Technology and data programmes that deliver real business outcomes.</p></div></div>
+        <div class="mp-prac" data-reveal><span class="no">05</span><div><h3>Organisation &amp; People</h3><p>Operating models and leadership that make strategy stick.</p></div></div>
+        <div class="mp-prac" data-reveal><span class="no">06</span><div><h3>Growth &amp; Markets</h3><p>New products, segments and geographies — de-risked and sequenced.</p></div></div>
+      </div>
+
+      <!-- APPROACH -->
+      <div class="mp-h" data-reveal>
+        <span class="k">How we work</span>
+        <h2>Side by side, from diagnosis to results.</h2>
+      </div>
+      <div class="mp-steps">
+        <div class="mp-step" data-reveal><div class="n">STEP 01</div><h3>Diagnose</h3><p>We get to the facts fast — rigorous analysis and candid conversations.</p></div>
+        <div class="mp-step" data-reveal><div class="n">STEP 02</div><h3>Design</h3><p>Clear options, a recommended path, and a plan your team owns.</p></div>
+        <div class="mp-step" data-reveal><div class="n">STEP 03</div><h3>Deliver</h3><p>With you in execution — not a report left on a shelf.</p></div>
+        <div class="mp-step" data-reveal><div class="n">STEP 04</div><h3>Sustain</h3><p>Capabilities and governance so results outlast the engagement.</p></div>
+      </div>
+
+      <!-- CASE STUDY -->
+      <div class="mp-h" data-reveal><span class="k">Selected work</span><h2>Proof, not promises.</h2></div>
+      <div class="mp-case" data-reveal>
+        <div class="img" role="img" aria-label="Leadership team reviewing performance data in a meeting"></div>
+        <div class="body">
+          <span class="tag">Case study · Banking</span>
+          <h3>A regional bank cut its cost-to-income ratio by eight points.</h3>
+          <p>Facing margin pressure, a €30bn regional bank asked Meridian to redesign its operating model. In nine months we restructured three divisions and automated core processes — without touching front-line service.</p>
+          <div class="results">
+            <div><b>−8 pts</b><span>Cost-to-income ratio</span></div>
+            <div><b>€120M</b><span>Run-rate savings</span></div>
+            <div><b>9 mo</b><span>To first results</span></div>
           </div>
         </div>
       </div>
 
-      <h2 style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.03em;font-size:clamp(22px,3vw,30px);margin:40px 0 6px" data-reveal>Services at a glance</h2>
-      <div class="bz-serv">
-        <div class="bz-srow" data-reveal><span class="no">01</span><div><h3>Law firms &amp; consulting</h3><p>Serious presences with expertise, team profiles and a clear contact funnel.</p></div></div>
-        <div class="bz-srow" data-reveal><span class="no">02</span><div><h3>Industry &amp; SME</h3><p>Company sites with products, references and a careers section.</p></div></div>
-        <div class="bz-srow" data-reveal><span class="no">03</span><div><h3>B2B services</h3><p>Clear service presentation and lead generation through smart forms.</p></div></div>
-        <div class="bz-srow" data-reveal><span class="no">04</span><div><h3>Advisory &amp; finance</h3><p>Trust-building pages backed by figures, data and proof points.</p></div></div>
+      <!-- STATS -->
+      <div class="mp-stats" data-reveal style="margin-top:34px">
+        <div class="mp-stat"><b>2009</b><span>Founded</span></div>
+        <div class="mp-stat"><b>320+</b><span>Engagements delivered</span></div>
+        <div class="mp-stat"><b>18</b><span>Countries</span></div>
+        <div class="mp-stat"><b>96%</b><span>Repeat &amp; referral clients</span></div>
       </div>
 
-      <div class="bz-logos" data-reveal>
-        <span class="lg">NORDBANK</span><span class="lg">HELVETIA &amp; CO</span><span class="lg">MERIDIAN</span><span class="lg">KRAFTWERK GMBH</span><span class="lg">AVISTA</span>
-      </div>
-
-      <blockquote class="bz-quote" data-reveal>
-        <p>"Within two months of the relaunch our qualified enquiries doubled. The site finally reflects the calibre of our firm."</p>
-        <cite><b>Dr. Anke Reuter</b> — Managing Partner, Reuter &amp; Vogel Legal</cite>
+      <!-- QUOTE -->
+      <blockquote class="mp-quote" data-reveal>
+        <svg class="qi" aria-hidden="true"><use href="#i-quote"/></svg>
+        <p>Meridian brought clarity when our board was divided. The strategy they helped us shape is the one we're still executing — and winning with — three years on.</p>
+        <cite><span class="av">AR</span><span><b>Dr. Anke Reuter</b><small>Chair of the Board · Helvetia Group</small></span></cite>
       </blockquote>
 
-      <div class="bz-cta" data-reveal>
-        <div><h2>Let's put your business online — properly.</h2><p>Book a free 30-minute consultation. No jargon, no obligation.</p></div>
+      <!-- LEADERSHIP -->
+      <div class="mp-h" data-reveal><span class="k">Leadership</span><h2>Senior people, on the work.</h2></div>
+      <div class="mp-team">
+        <div class="mp-person" data-reveal><div class="av">EM</div><b>Elena Marsh</b><span>Managing Partner</span></div>
+        <div class="mp-person" data-reveal><div class="av">TB</div><b>Tomas Brenner</b><span>Partner · Strategy</span></div>
+        <div class="mp-person" data-reveal><div class="av">SL</div><b>Sofia Lindqvist</b><span>Partner · Operations</span></div>
+        <div class="mp-person" data-reveal><div class="av">DO</div><b>David Okonkwo</b><span>Partner · Transactions</span></div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mp-cta" data-reveal>
+        <div><h2>Let's talk about your next decision.</h2><p>A confidential, no-obligation conversation with a senior partner.</p></div>
         <a class="btn primary" href="#business">Request a consultation <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
 
+      <!-- FOOTER -->
       <footer class="foot">
         <div class="foot-grid">
-          <div><h4>Business Studio</h4><p>Credible corporate websites that generate qualified leads and build lasting trust.</p>
+          <div><h4>Meridian Partners</h4><p>Independent strategy &amp; advisory for leadership teams. Founded 2009.</p>
             <div class="foot-soc"><a href="#business" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#s-linkedin"/></svg></a><a href="#business" aria-label="XING"><svg class="icon" aria-hidden="true"><use href="#s-xing"/></svg></a><a href="#business" aria-label="Email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></div></div>
-          <div><h4>Sectors</h4><ul><li>Legal &amp; consulting</li><li>Industry &amp; SME</li><li>Finance &amp; advisory</li></ul></div>
-          <div><h4>Contact</h4><ul><li>office@webdesign.studio</li><li>+49 30 1234 567</li><li>Berlin · Remote</li></ul></div>
+          <div><h4>Practices</h4><ul><li>Corporate Strategy</li><li>Operations &amp; Performance</li><li>M&amp;A &amp; Transactions</li><li>Digital Transformation</li></ul></div>
+          <div><h4>Offices</h4><ul><li>Berlin · Zürich</li><li>London · Singapore</li><li>partners@meridian-partners.com</li></ul></div>
         </div>
-        <div class="foot-bar"><span>© Webdesign Studio · Business</span><span>Your company, professionally online.</span></div>
+        <div class="foot-bar"><span>© Meridian Partners — a live Business-style demo by Webdesign Studio</span><span>Clarity in complex decisions.</span></div>
       </footer>
     </div>
   </section>
