@@ -1121,57 +1121,119 @@ body[data-theme="business"] .foot-grid{grid-template-columns:1.5fr 1fr 1fr 1fr 1
 /* =====================================================================
    SPORT — diagonal / dynamic
    ===================================================================== */
+/* SPORT — Northside FC (energetic football club) */
 body[data-theme="sport"]{background-image:repeating-linear-gradient(118deg,rgba(255,45,45,.045) 0 2px,transparent 2px 30px)}
-.sp-hero{position:relative;overflow:hidden;margin-top:14px;border-radius:6px;padding:60px 40px;color:#fff;
-  background:linear-gradient(105deg,#0c0c0f 40%,rgba(12,12,15,.2)),linear-gradient(120deg,#ff2d2d,#ff9500)}
-.sp-hero::after{content:"";position:absolute;right:-10%;top:0;bottom:0;width:42%;background:linear-gradient(120deg,#ff2d2d,#ff9500);clip-path:polygon(28% 0,100% 0,100% 100%,0 100%);opacity:.85}
-.sp-hero>*{position:relative;z-index:1}
-.sp-hero h1{font-family:'Bebas Neue';font-size:clamp(52px,9vw,108px);line-height:.86;font-style:italic;letter-spacing:.01em}
-.sp-hero .lead{font-size:17px;max-width:480px;margin-top:14px;color:#f1f1f4}
-body[data-theme="sport"] .sp-hero .eyebrow{color:#fff}
-body[data-theme="sport"] .btn{text-transform:uppercase;letter-spacing:.06em;font-style:italic;clip-path:polygon(7% 0,100% 0,93% 100%,0 100%)}
-body[data-theme="sport"] .btn.primary{background:linear-gradient(120deg,#ff2d2d,#ff9500);color:#fff}
+body[data-theme="sport"] .btn{text-transform:uppercase;letter-spacing:.06em;font-style:italic;font-family:'Oswald';font-weight:600;clip-path:polygon(7% 0,100% 0,93% 100%,0 100%)}
+body[data-theme="sport"] .btn.primary{background:linear-gradient(120deg,#ff2d2d,#ff9500);color:#fff;border:0}
+body[data-theme="sport"] .btn.primary:hover{transform:translateY(-2px)}
 body[data-theme="sport"] .btn.ghost{border-color:rgba(255,255,255,.3);color:#fff}
 
-.sp-band{margin-top:24px;display:flex;align-items:center;gap:22px;padding:22px 26px;border-radius:6px;color:#fff;position:relative;overflow:hidden;
-  background:linear-gradient(90deg,rgba(12,12,15,.78),rgba(12,12,15,.28)),url('images/pitch.webp') center/cover,linear-gradient(120deg,#2e7d32,#7cb342)}
-.sp-band .crest{width:74px;height:auto;flex:0 0 auto;filter:drop-shadow(0 4px 12px rgba(0,0,0,.55))}
-.sp-band .club{font-family:'Bebas Neue';font-size:clamp(32px,5vw,50px);line-height:.9;letter-spacing:.02em}
-.sp-band .tag{font-style:italic;opacity:.9;font-size:13.5px;margin-top:5px}
+/* hero */
+.sn-hero{position:relative;overflow:hidden;border-radius:6px;margin-top:14px;min-height:448px;display:flex;align-items:flex-end;padding:42px;color:#fff;background:linear-gradient(80deg,rgba(8,8,10,.94),rgba(8,8,10,.5) 56%,rgba(8,8,10,.16)),url('images/pitch.webp') center/cover,#0c0c0f}
+.sn-hero::after{content:"";position:absolute;right:-7%;top:-12%;bottom:-12%;width:30%;background:linear-gradient(120deg,#ff2d2d,#ff9500);clip-path:polygon(36% 0,100% 0,100% 100%,0 100%);opacity:.92}
+.sn-hero .inner{position:relative;z-index:1;max-width:660px}
+.sn-crestrow{display:flex;align-items:center;gap:13px;margin-bottom:16px}
+.sn-crest{width:54px;height:auto;flex:0 0 auto;filter:drop-shadow(0 4px 12px rgba(0,0,0,.6))}
+.sn-crestrow .nm{font-family:'Bebas Neue';font-size:28px;letter-spacing:.05em;line-height:1}
+.sn-crestrow .est{font-style:italic;font-size:12px;color:#ffc59a}
+.sn-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:'Oswald';font-weight:600;font-style:italic;text-transform:uppercase;letter-spacing:.14em;font-size:12px;color:#ff9500}
+.sn-hero h1{font-family:'Bebas Neue';font-size:clamp(54px,9vw,120px);line-height:.82;font-style:italic;letter-spacing:.01em;margin-top:12px}
+.sn-hero .lead{font-size:17px;max-width:460px;margin-top:14px;color:#e8e8ee;line-height:1.5}
+.sn-hero .cta-row{margin-top:26px}
 
-.sp-split{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;margin-top:36px;align-items:start}
-.sp-h{font-family:'Bebas Neue';font-size:clamp(28px,4vw,44px);letter-spacing:.03em;margin-bottom:14px}
-.fixtures{display:flex;flex-direction:column;gap:10px}
-.fix{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--card-border);border-left:4px solid var(--accent);padding:14px 18px}
-.fix .day{font-family:'Bebas Neue';font-size:24px;color:var(--accent);width:52px;flex:0 0 auto}
-.fix.sun{border-left-color:var(--accent2)}.fix.sun .day{color:var(--accent2)}
-.fx{flex:1;min-width:0}.fx b{display:block;font-size:15px;text-transform:uppercase;letter-spacing:.02em}.fx small{color:var(--muted);font-size:13px}
-.fix .time{font-weight:600;font-size:17px;white-space:nowrap}
-.sp-table{background:var(--card);border:1px solid var(--card-border);overflow:hidden}
-.sp-table .tr{display:grid;grid-template-columns:30px 1fr 40px 40px;gap:10px;padding:11px 16px;font-size:14px;align-items:center;border-bottom:1px solid var(--card-border)}
-.sp-table .tr:last-child{border:0}
-.sp-table .th{background:#0c0c0f;color:var(--accent2);font-family:'Bebas Neue';letter-spacing:.06em;font-size:15px}
-.sp-table .tr.me{background:rgba(255,45,45,.1)}.sp-table .tr.me b{color:var(--accent)}
-.sp-table .pos{font-family:'Bebas Neue';color:var(--muted)}
-.sp-table .pts{text-align:center;font-weight:600}
+/* next match band */
+.sn-next{display:flex;align-items:stretch;margin-top:16px;background:var(--card);border:1px solid var(--card-border);overflow:hidden;flex-wrap:wrap}
+.sn-next .lbl{background:linear-gradient(120deg,#ff2d2d,#ff9500);color:#fff;font-family:'Bebas Neue';font-size:21px;letter-spacing:.06em;padding:0 30px 0 22px;display:flex;align-items:center;clip-path:polygon(0 0,100% 0,86% 100%,0 100%)}
+.sn-next .match{flex:1;display:flex;align-items:center;justify-content:center;gap:18px;padding:16px 20px;min-width:240px}
+.sn-next .team{display:flex;align-items:center;gap:10px;font-family:'Bebas Neue';font-size:24px;letter-spacing:.03em;white-space:nowrap}
+.sn-next .vs{color:var(--accent);font-style:italic;font-family:'Oswald';font-weight:700;font-size:15px}
+.sn-next .meta{padding:14px 22px;border-left:1px solid var(--card-border);text-align:right}
+.sn-next .meta b{display:block;font-family:'Bebas Neue';font-size:22px;color:#fff;letter-spacing:.04em}
+.sn-next .meta span{font-size:12.5px;color:var(--muted)}
 
-.sp-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:38px}
-.sp-stat{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--card-border);padding:24px;clip-path:polygon(0 0,100% 0,100% 100%,8% 100%)}
-.sp-stat b{font-family:'Bebas Neue';font-size:46px;color:var(--accent);line-height:1;display:block}
-.sp-stat span{font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+/* section heading */
+.sn-h{display:flex;align-items:center;gap:16px;margin:50px 0 18px}
+.sn-h h2{font-family:'Bebas Neue';font-size:clamp(30px,4.4vw,52px);font-style:italic;letter-spacing:.02em;line-height:1;white-space:nowrap}
+.sn-h .ln{flex:1;height:3px;background:linear-gradient(90deg,var(--accent),transparent)}
 
-.sp-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
-.sp-plan{background:var(--card);border:1px solid var(--card-border);padding:26px;position:relative;transition:transform .2s,border-color .2s}
-.sp-plan:hover{transform:translateY(-5px);border-color:var(--accent)}
-.sp-plan.feat{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
-.sp-plan .tier{font-family:'Bebas Neue';font-size:24px;letter-spacing:.04em}
-.sp-plan .price{font-family:'Bebas Neue';font-size:44px;color:var(--accent);line-height:1.1}.sp-plan .price small{font-size:14px;color:var(--muted);font-family:'Oswald'}
-.sp-plan ul{list-style:none;margin:14px 0 18px;display:grid;gap:9px}
-.sp-plan li{display:flex;gap:9px;font-size:14px}.sp-plan li .icon{color:var(--accent);width:18px;height:18px}
-.sp-cta{margin-top:30px;text-align:center;padding:40px 24px;color:#fff;border-radius:6px;position:relative;overflow:hidden;
-  background:linear-gradient(100deg,#0c0c0f,rgba(12,12,15,.2)),linear-gradient(120deg,#ff2d2d,#ff9500)}
-.sp-cta h2{font-family:'Bebas Neue';font-size:clamp(34px,5vw,56px);font-style:italic;position:relative}
-.sp-cta p{position:relative;max-width:480px;margin:8px auto 22px;color:#f1f1f4}
+/* stats */
+.sn-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
+.sn-stat{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--card-border);padding:24px;clip-path:polygon(0 0,100% 0,100% 100%,7% 100%)}
+.sn-stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(#ff2d2d,#ff9500)}
+.sn-stat b{font-family:'Bebas Neue';font-size:clamp(38px,5vw,56px);color:#fff;line-height:1;display:block}
+.sn-stat span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:6px;display:block}
+
+/* fixtures & results */
+.sn-split{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.sn-list{display:flex;flex-direction:column;gap:8px}
+.sn-fix{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--card-border);border-left:4px solid var(--accent);padding:13px 16px}
+.sn-fix.sun{border-left-color:var(--accent2)}.sn-fix.sun .day{color:var(--accent2)}
+.sn-fix .day{font-family:'Bebas Neue';font-size:22px;color:var(--accent);width:46px;flex:0 0 auto;letter-spacing:.04em}
+.sn-fix .fx{flex:1;min-width:0}.sn-fix .fx b{display:block;font-size:14px;text-transform:uppercase;letter-spacing:.02em;font-weight:600}.sn-fix .fx small{color:var(--muted);font-size:12.5px}
+.sn-fix .time{font-family:'Bebas Neue';font-size:20px;white-space:nowrap;letter-spacing:.04em}
+.sn-res{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--card-border);padding:11px 16px}
+.sn-res .badge{width:30px;height:30px;display:grid;place-items:center;font-family:'Bebas Neue';font-size:17px;color:#fff;flex:0 0 auto}
+.sn-res .badge.w{background:#1faa4b}.sn-res .badge.d{background:#7a7a85}.sn-res .badge.l{background:#d2342f}
+.sn-res .fx{flex:1;min-width:0}.sn-res .fx b{display:block;font-size:14px;text-transform:uppercase;letter-spacing:.02em;font-weight:600}.sn-res .fx small{color:var(--muted);font-size:12.5px}
+.sn-res .score{font-family:'Bebas Neue';font-size:22px;letter-spacing:.06em}
+.sn-table{background:var(--card);border:1px solid var(--card-border);overflow:hidden;margin-top:18px}
+.sn-table .tr{display:grid;grid-template-columns:34px 1fr 48px 46px;gap:10px;padding:11px 16px;font-size:14px;align-items:center;border-bottom:1px solid var(--card-border)}
+.sn-table .tr:last-child{border:0}
+.sn-table .th{background:#08080a;color:var(--accent2);font-family:'Bebas Neue';letter-spacing:.06em;font-size:15px}
+.sn-table .tr.me{background:rgba(255,45,45,.12)}.sn-table .tr.me b{color:var(--accent)}
+.sn-table .pos{font-family:'Bebas Neue';color:var(--muted)}.sn-table .pts{text-align:center;font-weight:600}
+
+/* teams */
+.sn-teams{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sn-team{position:relative;overflow:hidden;border:1px solid var(--card-border);aspect-ratio:3/4;display:flex;align-items:flex-end;color:#fff}
+.sn-team .bg{position:absolute;inset:0;background:linear-gradient(165deg,rgba(150,24,24,.5),rgba(8,8,10,.86)),url('images/pitch.webp') center/cover,#0c0c0f;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+.sn-team:hover .bg{transform:scale(1.07)}
+.sn-team .no{position:absolute;top:8px;right:12px;font-family:'Bebas Neue';font-size:60px;color:rgba(255,255,255,.1);line-height:1}
+.sn-team .info{position:relative;z-index:1;padding:16px}
+.sn-team .info b{font-family:'Bebas Neue';font-size:25px;letter-spacing:.03em;display:block;line-height:1}
+.sn-team .info span{font-size:12px;color:#c7c7d0}
+.sn-team .info .ln{width:30px;height:3px;background:var(--accent);margin-top:9px}
+
+/* membership */
+.sn-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sn-plan{background:var(--card);border:1px solid var(--card-border);padding:26px;position:relative;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+.sn-plan:hover{transform:translateY(-5px);border-color:var(--accent)}
+.sn-plan.feat{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.sn-plan .tier{font-family:'Bebas Neue';font-size:26px;letter-spacing:.04em}
+.sn-plan .price{font-family:'Bebas Neue';font-size:46px;color:var(--accent);line-height:1.05}.sn-plan .price small{font-size:14px;color:var(--muted);font-family:'Oswald'}
+.sn-plan ul{list-style:none;margin:14px 0 18px;display:grid;gap:9px}
+.sn-plan li{display:flex;gap:9px;font-size:14px}.sn-plan li .icon{color:var(--accent);width:18px;height:18px;flex-shrink:0}
+.sn-plan .btn{margin-top:auto}
+
+/* sponsors */
+.sn-sponsors{margin-top:40px;border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);padding:22px 0;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.sn-sponsors .lab{font-family:'Bebas Neue';font-size:18px;letter-spacing:.06em;color:var(--muted);white-space:nowrap}
+.sn-sponsors .marks{display:flex;flex:1;justify-content:space-between;flex-wrap:wrap;gap:26px;align-items:center}
+.sn-sponsors .lg{font-family:'Bebas Neue';font-size:23px;letter-spacing:.05em;color:#6a6a76;transition:color .2s}
+.sn-sponsors .lg:hover{color:#e8e8ee}
+
+/* final cta */
+.sn-cta{margin-top:42px;text-align:center;padding:60px 24px;color:#fff;border-radius:6px;position:relative;overflow:hidden;background:linear-gradient(100deg,rgba(8,8,10,.9),rgba(8,8,10,.35)),url('images/pitch.webp') center/cover,linear-gradient(120deg,#ff2d2d,#ff9500)}
+.sn-cta::after{content:"";position:absolute;left:-6%;top:-12%;bottom:-12%;width:26%;background:linear-gradient(120deg,#ff2d2d,#ff9500);clip-path:polygon(0 0,64% 0,100% 100%,0 100%);opacity:.9}
+.sn-cta>*{position:relative;z-index:1}
+.sn-cta h2{font-family:'Bebas Neue';font-size:clamp(42px,6.4vw,78px);font-style:italic;letter-spacing:.02em;line-height:.92}
+.sn-cta p{max-width:480px;margin:12px auto 24px;color:#f1f1f4}
+
+@media(prefers-reduced-motion:reduce){.sn-team .bg{transition:none}}
+@media(max-width:900px){
+  .sn-hero{min-height:380px;padding:30px}.sn-hero::after{width:38%}
+  .sn-next .meta{border-left:0;text-align:left;width:100%}
+  .sn-split{grid-template-columns:1fr}
+  .sn-stats{grid-template-columns:repeat(2,1fr)}
+  .sn-teams{grid-template-columns:repeat(2,1fr)}
+  .sn-plans{grid-template-columns:1fr}
+  .sn-sponsors .marks{justify-content:flex-start;gap:22px}
+}
+@media(max-width:560px){
+  .sn-stats{grid-template-columns:1fr 1fr}.sn-teams{grid-template-columns:1fr}
+  .sn-hero::after{display:none}
+  .sn-next .lbl{clip-path:none;width:100%;padding:8px 18px}
+}
 
 /* =====================================================================
    NGO — image-oriented, warm
@@ -2330,75 +2392,109 @@ Signed our guestbook? Tell all your friends!  :-)</pre>
   <!-- ===== SPORT ===== -->
   <section class="page" data-page="sport" aria-label="Sport style demo">
     <div class="wrap">
-      <div class="sp-hero" data-reveal>
-        <span class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-whistle"/></svg>Sport · Energy</span>
-        <h1>Power. Pace.<br>Full energy.</h1>
-        <p class="lead">Dynamic, loud and always in motion. The presence for gyms, clubs, trainers and events that run on pure adrenaline.</p>
-        <div class="cta-row"><a class="btn primary" href="#sport">Join now <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn ghost" href="#home" data-route="home">All styles</a></div>
-      </div>
-
-      <div class="sp-band" data-reveal>
-        <svg class="crest" viewBox="0 0 80 96" role="img" aria-label="SC Sports crest">
-          <path d="M5 5 H75 V50 C75 76 56 89 40 95 C24 89 5 76 5 50 Z" fill="#0d0d0f" stroke="#ff9500" stroke-width="3"/>
-          <path d="M6 6 H74 V29 H6 Z" fill="#ff2d2d"/>
-          <text x="40" y="25" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="20" fill="#fff">SC</text>
-          <circle cx="40" cy="56" r="15" fill="#fff" stroke="#0d0d0f" stroke-width="2"/>
-          <path d="M40 45 L48 51 L45 60 H35 L32 51 Z" fill="#0d0d0f"/>
-          <text x="40" y="86" text-anchor="middle" font-family="Oswald,sans-serif" font-size="9" fill="#ff9500">EST. 1974</text>
-        </svg>
-        <div><div class="club">SC Sports</div><div class="tag">Football Club · Est. 1974 · "Pride &amp; Passion"</div></div>
-      </div>
-
-      <div class="sp-split">
-        <div data-reveal>
-          <h2 class="sp-h">Upcoming fixtures</h2>
-          <div class="fixtures">
-            <div class="fix"><span class="day">SAT</span><div class="fx"><b>U13 Youth</b><small>SC Sports vs Greenfield United</small></div><span class="time">10:00</span></div>
-            <div class="fix"><span class="day">SAT</span><div class="fx"><b>U15 Youth</b><small>SC Sports vs Greenfield United</small></div><span class="time">12:00</span></div>
-            <div class="fix"><span class="day">SAT</span><div class="fx"><b>U17 Youth</b><small>SC Sports vs Greenfield United</small></div><span class="time">14:00</span></div>
-            <div class="fix sun"><span class="day">SUN</span><div class="fx"><b>Men's · Summer Cup</b><small>SC Sports Invitational — 8 teams</small></div><span class="time">11:00</span></div>
+      <!-- HERO -->
+      <div class="sn-hero" data-reveal>
+        <div class="inner">
+          <div class="sn-crestrow">
+            <svg class="sn-crest" viewBox="0 0 80 96" role="img" aria-label="Northside FC crest">
+              <path d="M5 5 H75 V50 C75 76 56 89 40 95 C24 89 5 76 5 50 Z" fill="#0d0d0f" stroke="#ff9500" stroke-width="3"/>
+              <path d="M6 6 H74 V30 H6 Z" fill="#ff2d2d"/>
+              <text x="40" y="49" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="34" fill="#fff">N</text>
+              <circle cx="40" cy="68" r="10" fill="#fff" stroke="#0d0d0f" stroke-width="2"/>
+              <path d="M40 60 l5 3.6 -1.9 6 h-6.2 l-1.9-6 Z" fill="#0d0d0f"/>
+              <text x="40" y="90" text-anchor="middle" font-family="Oswald,sans-serif" font-size="8" fill="#ff9500">EST. 1974</text>
+            </svg>
+            <div><div class="nm">Northside FC</div><div class="est">Football Club · Est. 1974</div></div>
           </div>
-        </div>
-        <div data-reveal>
-          <h2 class="sp-h">League table</h2>
-          <div class="sp-table" role="table" aria-label="League standings">
-            <div class="tr th" role="row"><span class="pos" role="columnheader">#</span><span role="columnheader">Club</span><span class="pts" role="columnheader">GD</span><span class="pts" role="columnheader">Pts</span></div>
-            <div class="tr" role="row"><span class="pos">1</span><b>Greenfield Utd</b><span class="pts">+24</span><span class="pts">41</span></div>
-            <div class="tr me" role="row"><span class="pos">2</span><b>SC Sports</b><span class="pts">+19</span><span class="pts">38</span></div>
-            <div class="tr" role="row"><span class="pos">3</span><b>Harbor City</b><span class="pts">+12</span><span class="pts">34</span></div>
-            <div class="tr" role="row"><span class="pos">4</span><b>Ravens FC</b><span class="pts">+6</span><span class="pts">29</span></div>
-          </div>
+          <span class="sn-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-whistle"/></svg>Matchday is everything</span>
+          <h1>We are<br>Northside.</h1>
+          <p class="lead">One club, one city, eleven teams — built on pace, pressure and pride. Come and feel the noise.</p>
+          <div class="cta-row"><a class="btn primary" href="#sport">Join the club <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn ghost" href="#sport">Get tickets</a></div>
         </div>
       </div>
 
-      <div class="sp-stats">
-        <div class="sp-stat" data-reveal><b>1974</b><span>Founded</span></div>
-        <div class="sp-stat" data-reveal><b>11</b><span>Active teams</span></div>
-        <div class="sp-stat" data-reveal><b>480</b><span>Members</span></div>
-        <div class="sp-stat" data-reveal><b>3×</b><span>Regional champions</span></div>
+      <!-- NEXT MATCH -->
+      <div class="sn-next" data-reveal>
+        <div class="lbl">Next Match</div>
+        <div class="match"><span class="team">Northside FC</span><span class="vs">VS</span><span class="team">Harbor City</span></div>
+        <div class="meta"><b>SAT · 15:00</b><span>Northside Arena · League One</span></div>
       </div>
 
-      <h2 class="sp-h" style="margin:40px 0 16px" data-reveal>Membership</h2>
-      <div class="sp-plans">
-        <div class="sp-plan" data-reveal><div class="tier">Trial</div><div class="price">€0<small> / week</small></div><ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>1 free training week</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>All open sessions</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>No commitment</li></ul><a class="btn ghost" href="#sport">Start trial</a></div>
-        <div class="sp-plan feat" data-reveal><div class="tier">Player</div><div class="price">€29<small> / month</small></div><ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>All team trainings</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Match-day kit</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Fan-area access</li></ul><a class="btn primary" href="#sport">Join now</a></div>
-        <div class="sp-plan" data-reveal><div class="tier">Family</div><div class="price">€59<small> / month</small></div><ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Up to 4 members</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Youth academy</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Event discounts</li></ul><a class="btn ghost" href="#sport">Choose family</a></div>
+      <!-- STATS -->
+      <div class="sn-stats">
+        <div class="sn-stat" data-reveal><b data-count="11">11</b><span>Active teams</span></div>
+        <div class="sn-stat" data-reveal><b data-count="480">480</b><span>Club members</span></div>
+        <div class="sn-stat" data-reveal><b data-count="128">128</b><span>Goals this season</span></div>
+        <div class="sn-stat" data-reveal><b data-count="3" data-suffix="×">3×</b><span>Regional titles</span></div>
       </div>
 
-      <div class="sp-cta" data-reveal>
-        <h2>Ready to play?</h2>
-        <p>Book a free trial session this week and feel the energy for yourself.</p>
+      <!-- FIXTURES & RESULTS -->
+      <div class="sn-h"><h2>Fixtures &amp; results</h2><span class="ln"></span></div>
+      <div class="sn-split">
+        <div data-reveal>
+          <div style="font-family:'Bebas Neue';font-size:22px;letter-spacing:.04em;margin-bottom:12px">Upcoming</div>
+          <div class="sn-list">
+            <div class="sn-fix"><span class="day">SAT</span><div class="fx"><b>Men's First · League</b><small>Northside FC vs Harbor City</small></div><span class="time">15:00</span></div>
+            <div class="sn-fix"><span class="day">SUN</span><div class="fx"><b>Women's · League</b><small>Northside FC vs Ravens</small></div><span class="time">13:00</span></div>
+            <div class="sn-fix sun"><span class="day">WED</span><div class="fx"><b>U17 · Cup</b><small>Greenfield Utd vs Northside</small></div><span class="time">18:30</span></div>
+          </div>
+        </div>
+        <div data-reveal>
+          <div style="font-family:'Bebas Neue';font-size:22px;letter-spacing:.04em;margin-bottom:12px">Recent form</div>
+          <div class="sn-list">
+            <div class="sn-res"><span class="badge w">W</span><div class="fx"><b>Men's First · League</b><small>Northside FC vs Ravens FC</small></div><span class="score">3–1</span></div>
+            <div class="sn-res"><span class="badge w">W</span><div class="fx"><b>Women's · League</b><small>Harbor City vs Northside</small></div><span class="score">0–2</span></div>
+            <div class="sn-res"><span class="badge d">D</span><div class="fx"><b>U17 · League</b><small>Northside vs Greenfield Utd</small></div><span class="score">1–1</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="sn-table" role="table" aria-label="League standings">
+        <div class="tr th" role="row"><span class="pos">#</span><span>Club</span><span class="pts">GD</span><span class="pts">Pts</span></div>
+        <div class="tr" role="row"><span class="pos">1</span><b>Greenfield Utd</b><span class="pts">+24</span><span class="pts">41</span></div>
+        <div class="tr me" role="row"><span class="pos">2</span><b>Northside FC</b><span class="pts">+19</span><span class="pts">38</span></div>
+        <div class="tr" role="row"><span class="pos">3</span><b>Harbor City</b><span class="pts">+12</span><span class="pts">34</span></div>
+        <div class="tr" role="row"><span class="pos">4</span><b>Ravens FC</b><span class="pts">+6</span><span class="pts">29</span></div>
+      </div>
+
+      <!-- TEAMS -->
+      <div class="sn-h"><h2>Our teams</h2><span class="ln"></span></div>
+      <div class="sn-teams">
+        <article class="sn-team" data-reveal><span class="bg"></span><span class="no">01</span><span class="info"><b>Men's First</b><span>Senior · League One</span><span class="ln"></span></span></article>
+        <article class="sn-team" data-reveal><span class="bg"></span><span class="no">02</span><span class="info"><b>Women's</b><span>Senior · Premier</span><span class="ln"></span></span></article>
+        <article class="sn-team" data-reveal><span class="bg"></span><span class="no">03</span><span class="info"><b>Academy U17</b><span>Youth · Regional</span><span class="ln"></span></span></article>
+        <article class="sn-team" data-reveal><span class="bg"></span><span class="no">04</span><span class="info"><b>Academy U15</b><span>Youth · Regional</span><span class="ln"></span></span></article>
+      </div>
+
+      <!-- MEMBERSHIP -->
+      <div class="sn-h"><h2>Become a member</h2><span class="ln"></span></div>
+      <div class="sn-plans">
+        <div class="sn-plan" data-reveal><div class="tier">Trial</div><div class="price">€0<small> / week</small></div><ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>1 free training week</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>All open sessions</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>No commitment</li></ul><a class="btn ghost" href="#sport">Start trial</a></div>
+        <div class="sn-plan feat" data-reveal><div class="tier">Player</div><div class="price">€29<small> / month</small></div><ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>All team trainings</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Match-day kit</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Fan-area access</li></ul><a class="btn primary" href="#sport">Join now</a></div>
+        <div class="sn-plan" data-reveal><div class="tier">Family</div><div class="price">€59<small> / month</small></div><ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Up to 4 members</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Youth academy</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Event discounts</li></ul><a class="btn ghost" href="#sport">Choose family</a></div>
+      </div>
+
+      <!-- SPONSORS -->
+      <div class="sn-sponsors" data-reveal>
+        <span class="lab">Proudly backed by</span>
+        <div class="marks"><span class="lg">Voltic</span><span class="lg">Kicksport</span><span class="lg">Harbor Bank</span><span class="lg">Apex Energy</span><span class="lg">Northgate</span></div>
+      </div>
+
+      <!-- FINAL CTA -->
+      <div class="sn-cta" data-reveal>
+        <h2>Be part of<br>Northside.</h2>
+        <p>Trials are open all season. Bring your boots — we'll bring the energy.</p>
         <a class="btn primary" href="#sport">Book a trial <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
 
+      <!-- FOOTER -->
       <footer class="foot">
         <div class="foot-grid">
-          <div><h4>Sport Studio</h4><p>High-energy websites for clubs, gyms, trainers and sporting events.</p>
+          <div><h4>Northside FC</h4><p>One club, one city — eleven teams since 1974. Pace, pressure, pride.</p>
             <div class="foot-soc"><a href="#sport" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#s-instagram"/></svg></a><a href="#sport" aria-label="TikTok"><svg class="icon" aria-hidden="true"><use href="#s-tiktok"/></svg></a><a href="#sport" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#s-youtube"/></svg></a></div></div>
-          <div><h4>Club</h4><ul><li>Fixtures</li><li>League table</li><li>Youth academy</li></ul></div>
-          <div><h4>Visit</h4><ul><li>SC Sports Arena</li><li>Greenfield Road 1974</li><li>Open daily</li></ul></div>
+          <div><h4>Club</h4><ul><li>Fixtures &amp; results</li><li>League table</li><li>Our teams</li><li>Academy</li></ul></div>
+          <div><h4>Visit</h4><ul><li>Northside Arena</li><li>Riverside Road 19</li><li>Matchdays &amp; training</li></ul></div>
         </div>
-        <div class="foot-bar"><span>© Webdesign Studio · Sport</span><span>No excuses. Just results.</span></div>
+        <div class="foot-bar"><span>© Northside FC — a live Sport-style demo by Webdesign Studio</span><span>No excuses. Just results.</span></div>
       </footer>
     </div>
   </section>
@@ -2840,6 +2936,35 @@ Signed our guestbook? Tell all your friends!  :-)</pre>
   function activate(){ if(!counted){ counted = true; countUp(); } }
   new MutationObserver(function(){ if(isBiz()) activate(); }).observe(document.body, {attributes:true, attributeFilter:['data-theme']});
   if(isBiz()) activate();
+})();
+</script>
+<script>
+/* NORTHSIDE FC (Sport page) — animated numbers */
+(function(){
+  var sp = document.querySelector('.page[data-page="sport"]');
+  if(!sp) return;
+  var rm = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function isSport(){ return document.body.getAttribute('data-theme') === 'sport'; }
+  var counted = false;
+  function countUp(){
+    sp.querySelectorAll('[data-count]').forEach(function(el){
+      var target = parseFloat(el.getAttribute('data-count'));
+      var suf = el.getAttribute('data-suffix') || '';
+      if(rm.matches || document.hidden){ el.textContent = target + suf; return; }
+      var start = null, dur = 1100;
+      function step(ts){
+        if(!start) start = ts;
+        var p = Math.min(1, (ts - start) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased) + suf;
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  function activate(){ if(!counted){ counted = true; countUp(); } }
+  new MutationObserver(function(){ if(isSport()) activate(); }).observe(document.body, {attributes:true, attributeFilter:['data-theme']});
+  if(isSport()) activate();
 })();
 </script>
 </body>
